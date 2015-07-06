@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html><!-- webinar-followup.html -->
+<head>
+	<!-- Strings -->
+	<meta class="mktoString" id="title" mktoName="Title" default="Synthesio Webinars">
+	<meta class="mktoString" id="heading1" mktoName="Heading" default="I'm The Page Heading!">
+	<meta class="mktoString" id="heading2" mktoName="Subheading" default="I'm The Page Subeading!">
+	<meta class="mktoString" id="heading3" mktoName="Main Body Title" default="I'm The Main Body Title!">
+
+	<!-- Booleans -->
+	<meta class="mktoBoolean" id="heading1Toggle" mktoName="Show/Hide Heading" default="true" true_value="block" false_value="none">
+	<meta class="mktoBoolean" id="heading2Toggle" mktoName="Show/Hide Subeading" default="true" true_value="block" false_value="none">
+	<meta class="mktoBoolean" id="heading3Toggle" mktoName="Show/Hide Main Body Title" default="true" true_value="block" false_value="none">
+	<meta class="mktoBoolean" id="introImgToggle" mktoName="Show/Hide Intro Image" default="true" true_value="block" false_value="none">
+
+	<title>${title}</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="http://resources.synthesio.com/rs/synthesio/images/reset.css" media="screen">
+
+	
+
+	<style>
+		body{
+			font-family: 'Helvetica Neue', Helvetica, sans-serif;
+		}
+		h1{
+			font-size: 54px;
+			line-height: 54px;
+			margin-bottom: 18px;
+		}
+		h2{
+			font-size: 24px;
+			line-height: 36px;
+			margin-bottom: 18px;
+		}
+		h3{
+			font-size: 21px;
+		}
+		h4, h5{
+			font-size: 18px;
+			font-weight: normal;
+		}
+		.form h3{
+			color: #fff;
+			text-align: center;
+			font-size: 21px;
+			line-height: 36px;
+		}
+		p{
+			font-size: 16px;
+			line-height: 18px;
+			margin-bottom: 18px;
+		}
+		header, .main, footer, .title{
+			padding: 0 15%;
+		}
+		header{
+			height: 54px;
+		}
+		img, iframe{
+			max-width: 100%;
+		}
+		.mktoImg{
+			line-height: 0;
+		}
+		.title{
+			color: #fff;
+			background: #1e85c4;
+			padding-top: 18px;
+			text-align: center;
+			line-height: 0;
+		}
+		.main{
+			padding-top: 18px;
+			padding-bottom: 18px;
+		}
+		.main h2{
+			color: #1e85c4;
+			margin-bottom: 18px;
+		}
+		.form{
+			border-radius: 5px;
+			width: 38%;
+			border: 2px solid #1e85c4;
+			box-shadow: 0 0 1px rgba(0, 0, 0, .7);
+			margin: 0 auto;
+		}
+		.form h3{
+			color: #1e85c4;
+		}
+		.supporting, .form{
+			text-align: center;
+		}
+		.supporting ul{
+			list-style: circle;
+			padding-left: 40px;
+			margin-bottom: 18px;
+		}
+		.speakers{
+			margin-bottom: 18px;
+		}
+		.title:nth-of-type(2){
+			padding-bottom: 18px;
+		}
+		.speakerImg{
+			float: left;
+			width: 50%;
+			margin: 0 10px 10px 0;
+			border: 3px solid #1e85c4;
+		}
+		.speakers h3, .speakers h4, .speakers h5{
+			color: #1e85c4;
+		}
+		.speakers h5{
+			margin-bottom: 18px;
+		}
+		footer{
+			background-color: #444;
+			color: #fff;
+			text-align: center;
+			min-height: 126px;
+		}
+		footer small{
+			height: 100%;
+			display: inline-block;
+			line-height: 126px;
+		}
+		form{
+			padding-left: 10px;
+			padding-bottom: 36px;
+		}
+		label{
+			color: #1e85c4;
+			margin-bottom: 5px;
+		}
+		button[type="submit"]{
+			padding: 5px 10px;
+			background-color: #1e85c4 !important;
+			color: #fff !important;
+			border-radius: 5px;
+			border: none;
+			outline: none;
+			font-size: 16px;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+		}
+		/* Show/Hide Sections */
+		.heading1{
+			display: ${heading1Toggle};
+		}
+		.heading2{
+			display: ${heading2Toggle};
+		}
+		.heading3{
+			display: ${heading3Toggle};
+		}
+		.heading4{
+			display: ${heading4Toggle};
+		}
+		#introImg{
+			display: ${introImgToggle};
+		}
+		/* Media Queries */
+		@media screen and (min-width: 960px){
+			.speakers:nth-of-type(3n+3){
+				margin-right: 0;
+			}
+		}
+		@media screen and (max-width: 1280px){
+			header, .main, footer, .title{
+				padding-left: 10%;
+				padding-right: 10%;
+			}
+		}
+		@media screen and (max-width: 960px){
+			header, .main, footer, .title{
+				padding-left: 5%;
+				padding-right: 5%;
+			}
+			.speakers{
+				width: 49%;
+				margin-right: 2%;
+			}
+			.speakers:nth-of-type(2n+2){
+				margin-right: 0;
+			}
+		}
+		@media screen and (max-width: 760px){
+			h1{
+				font-size: 30px;
+				line-height: 36px;
+			}
+			h2{
+				font-size: 18px;
+				line-height: 18px;
+			}
+			.form, .supporting{
+				float: none;
+				width: 100%;
+			}
+			.form{
+				margin-top: 0;
+			}
+			.supporting{
+				margin-bottom: 18px;
+			}
+			.speakers{
+				width: 100%;
+				margin-right: 0;
+			}
+			.speakerImg{
+				float: none;
+				width: 100%;
+				margin-right: 0;
+				text-align: center;
+			}
+			.mktoButtonWrap{
+				margin-left: 0 !important;
+			}
+		}
+	</style>
+</head>
+<body>
+	<header id="mktHeader">
+		<img src="http://resources.synthesio.com/rs/synthesio/images/Synthesio-Logo-RGB-150x50.jpg" alt="Synthesio">
+	</header>
+	<div class="title">
+		<h1 class="heading1">${heading1}</h1>
+		<h2 class="heading2">${heading2}</h2>
+		<div class="mktoImg" id="introImg" mktoName="Intro Image">
+			<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/webinars-full.png" alt="Synthesio Webinars">
+		</div>
+	</div>
+	<section class="main group" role="main">
+		<h2>${heading3}</h2>
+		<div class="supporting  mktoText" id="body" mktoName="Main Body">
+			<ul>
+				<li>Supporting bullets go here.</li>
+				<li>Supporting bullets go here.</li>
+				<li>Supporting bullets go here.</li>
+				<li>Supporting bullets go here.</li>
+				<li>Supporting bullets go here.</li>
+			</ul>
+			<p>In this webinar, we will help you understand how Synthesio is working to provide marketers the proof they are looking for to validate their social media work, by using IMPACT, Synthesio’s new Social ROI metrics.</p>
+           	<p>Join our webinar to learn how to incorporate executive-level social metrics that will finally answer the key questions around ROI:</p>
+		</div>
+		<aside class="form">
+			<h3>Share</h3>
+			<div class="mktoShareButton" id="exampleShareButton" mktoName="Example Share Button"></div>
+		</aside>
+	</section>
+	<footer id="mktFooter" class="mktoText" mktoName="Footer">
+		<small>&copy;2015 Synthesio. All rights reserved.</small>
+	</footer>
+</body>
+</html>

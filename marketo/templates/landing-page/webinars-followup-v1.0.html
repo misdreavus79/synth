@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<!-- Strings -->
+	<meta class="mktoString" id="title" mktoName="Title" default="Synthesio">
+	<meta class="mktoString" id="heading1" mktoName="Heading" default="I'm The Page Heading!">
+	<meta class="mktoString" id="heading2" mktoName="Subheading" default="I'm The Page Subeading!">
+	<meta class="mktoString" id="heading3" mktoName="Main Body Title" default="I'm The Main Body Title!">
+
+
+	<!-- Booleans -->
+	<meta class="mktoBoolean" id="heading1Toggle" mktoName="Heading" default="true" true_value="block" false_value="none">
+	<meta class="mktoBoolean" id="heading2Toggle" mktoName="Subeading" default="true" true_value="block" false_value="none">
+	<meta class="mktoBoolean" id="heading3Toggle" mktoName="Main Body Title" default="true" true_value="block" false_value="none">
+	<meta class="mktoBoolean" id="heading4Toggle" mktoName="Speakers Title" default="true" true_value="block" false_value="none">
+
+	<title>${title}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="http://resources.synthesio.com/rs/synthesio/images/reset.css" media="screen">
+	<style>
+		body{
+			font-family: 'Helvetica Neue', Helvetica, sans-serif;
+		}
+		h1{
+			font-size: 54px;
+			line-height: 54px;
+			text-transform: uppercase;
+		}
+		h2, h3{
+			font-size: 24px;
+			line-height: 36px;
+			margin-bottom: 18px;
+			text-transform: uppercase;
+		}
+		.form h3{
+			color: #c5001a;
+			text-align: center;
+			font-size: 21px;
+			line-height: 36px;
+		}
+		p{
+			font-size: 16px;
+			line-height: 18px;
+			margin-bottom: 18px;
+		}
+		header, .main, footer{
+			padding: 0 20%;
+		}
+		header{
+			height: 54px;
+		}
+		.main{
+			color: #fff;
+			background: #1e85c4;
+			padding-top: 18px;
+			padding-bottom: 18px;
+		}
+		.supporting{
+			padding: 18px 20%;
+		}
+		.supporting ul{
+			list-style: circle;
+			padding-left: 20px;
+		}
+		footer{
+			background-color: #444;
+			color: #fff;
+			text-align: center;
+			min-height: 126px;
+			width: 100%;
+			position: fixed;
+			bottom: 0;
+		}
+		footer small{
+			height: 100%;
+			display: inline-block;
+			line-height: 126px;
+		}
+		/* Media Queries */
+		@media screen and (max-width: 1280px){
+			header, .main, .supporting, footer{
+				padding-left: 10%;
+				padding-right: 10%;
+			}
+		}
+		@media screen and (max-width: 960px){
+			header, .main, .supporting, footer{
+				padding-left: 5%;
+				padding-right: 5%;
+			}
+		}
+		@media screen and (max-width: 760px){
+			footer{
+				position: static;
+			}
+		}
+	</style>
+</head>
+<body>
+	<header id="mktHeader">
+		<img src="http://resources.synthesio.com/rs/synthesio/images/Synthesio-Logo-RGB-150x50.jpg" alt="Synthesio">
+	</header>
+	<section class="main group" role="main">
+		<div class="mktoContent">
+			<h1 class="heading1">${heading1}</h1>
+			<h2 class="heading2">${heading2}</h2>
+		</div>
+	</section>
+	<section class="supporting group mktoText" id="supporting" mktoName="Thank You Message">
+		<p>Provide a description here. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+	</section>
+	<footer id="mktFooter" class="mktoText" mktoName="Footer">
+		<small>&copy;2015 Synthesio. All rights reserved.</small>
+	</footer>
+</body>
+</html>

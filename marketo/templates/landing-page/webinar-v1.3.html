@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html><!-- Webinar v1.3 -->
+<head>
+	<!-- Strings -->
+	<meta class="mktoString" id="title" mktoName="Title" default="Synthesio Webinars">
+	<meta class="mktoString" id="heading1" mktoName="Heading" default="I'm The Page Heading!">
+	<meta class="mktoString" id="heading2" mktoName="Subheading" default="I'm The Page Subeading!">
+	<meta class="mktoString" id="heading3" mktoName="Main Body Title" default="I'm The Main Body Title!">
+	<meta class="mktoString" id="speaker1Name" mktoName="Speaker 1 Name" default="Speaker Name">
+	<meta class="mktoString" id="speaker1Company" mktoName="Speaker 1 Company" default="Speaker Company">
+	<meta class="mktoString" id="speaker1Title" mktoName="Speaker 1 Title" default="Speaker Title">
+	<meta class="mktoString" id="speaker2Name" mktoName="Speaker 2 Name" default="Speaker Name">
+	<meta class="mktoString" id="speaker2Company" mktoName="Speaker 2 Company" default="Speaker Company">
+	<meta class="mktoString" id="speaker2Title" mktoName="Speaker 2 Title" default="Speaker Title">
+	<meta class="mktoString" id="speaker3Name" mktoName="Speaker 3 Name" default="Speaker Name">
+	<meta class="mktoString" id="speaker3Company" mktoName="Speaker 3 Company" default="Speaker Company">
+	<meta class="mktoString" id="speaker3Title" mktoName="Speaker 3 Title" default="Speaker Title">
+	<meta class="mktoString" id="speaker4Name" mktoName="Speaker 4 Name" default="Speaker Name">
+	<meta class="mktoString" id="speaker4Company" mktoName="Speaker 4 Company" default="Speaker Company">
+	<meta class="mktoString" id="speaker4Title" mktoName="Speaker 4 Title" default="Speaker Title">
+	<meta class="mktoString" id="speaker5Name" mktoName="Speaker 5 Name" default="Speaker Name">
+	<meta class="mktoString" id="speaker5Company" mktoName="Speaker 5 Company" default="Speaker Company">
+	<meta class="mktoString" id="speaker5Title" mktoName="Speaker 5 Title" default="Speaker Title">
+	<meta class="mktoString" id="speaker6Name" mktoName="Speaker 6 Name" default="Speaker Name">
+	<meta class="mktoString" id="speaker6Company" mktoName="Speaker 6 Company" default="Speaker Company">
+	<meta class="mktoString" id="speaker6Title" mktoName="Speaker 6 Title" default="Speaker Title">
+	<meta class="mktoString" id="bgURL" mktoName="Background URL" default="http://resources.synthesio.com/rs/297-CXJ-795/images/scc-cover-full-clear.png">
+
+	<!-- Booleans -->
+	<meta class="mktoBoolean" id="heading1Toggle" mktoName="Heading" default="true" true_value="block" false_value="none">
+	<meta class="mktoBoolean" id="heading2Toggle" mktoName="Subeading" default="true" true_value="block" false_value="none">
+	<meta class="mktoBoolean" id="heading3Toggle" mktoName="Main Body Title" default="true" true_value="block" false_value="none">
+	<meta class="mktoBoolean" id="heading4Toggle" mktoName="Speakers Title" default="true" true_value="block" false_value="none">
+	<meta class="mktoBoolean" id="introImgToggle" mktoName="Intro Image" default="true" true_value="block" false_value="none">
+	<meta class="mktoBoolean" id="introToggle" mktoName="Intro" default="true" true_value="block" false_value="none">
+	<meta class="mktoBoolean" id="speaker1Toggle" mktoName="Speaker 1" default="true" true_value="block" false_value="none">
+	<meta class="mktoBoolean" id="speaker2Toggle" mktoName="Speaker 2" default="true" true_value="block" false_value="none">
+	<meta class="mktoBoolean" id="speaker3Toggle" mktoName="Speaker 3" default="true" true_value="block" false_value="none">
+	<meta class="mktoBoolean" id="speaker4Toggle" mktoName="Speaker 4" default="true" true_value="block" false_value="none">
+	<meta class="mktoBoolean" id="speaker5Toggle" mktoName="Speaker 5" default="true" true_value="block" false_value="none">
+	<meta class="mktoBoolean" id="speaker6Toggle" mktoName="Speaker 6" default="true" true_value="block" false_value="none">
+
+	<title>${title}</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="http://resources.synthesio.com/rs/synthesio/images/reset.css" media="screen">
+	<style>
+		body{
+			font-family: 'Helvetica Neue', Helvetica, sans-serif;
+		}
+		h1{
+			font-size: 54px;
+			line-height: 54px;
+			margin-bottom: 18px;
+		}
+		h2{
+			font-size: 24px;
+			line-height: 36px;
+		}
+		h3{
+			font-size: 21px;
+		}
+		h4, h5{
+			font-size: 18px;
+			font-weight: normal;
+		}
+		.form h3{
+			color: #fff;
+			text-align: center;
+			font-size: 21px;
+			line-height: 36px;
+		}
+		p{
+			font-size: 16px;
+			line-height: 18px;
+			margin-bottom: 18px;
+		}
+		header, .main, footer, .title{
+			padding: 0 20%;
+		}
+		header{
+			min-height: 54px;
+			padding-top: 9px;
+		}
+		img{
+			max-width: 100%;
+		}
+		.mktoImg{
+			line-height: 0;
+		}
+		.title{
+			color: #fff;
+			background: #1e85c4;
+			padding-top: 18px;
+			padding-bottom: 18px;
+			text-align: center;
+			line-height: 0;
+			position: relative;
+		}
+		.title:first-of-type{
+			background-image: url(${bgURL});
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
+		}
+		.intro{
+			margin-top: 18px;
+		}
+		.main{
+			padding-top: 18px;
+			padding-bottom: 18px;
+		}
+		.main h2{
+			color: #1e85c4;
+			margin-bottom: 18px;
+		}
+		.supporting, .form{
+			float: left;
+		}
+		.form{
+			border-radius: 5px;
+			width: 38%;
+			border: 2px solid #1e85c4;
+			box-shadow: 0 0 1px rgba(0, 0, 0, .7);
+		}
+		.form h3{
+			color: #1e85c4;
+		}
+		.supporting{
+			width: 60%;
+			margin-right: 2%;
+		}
+		.supporting ul{
+			list-style: circle;
+			padding-left: 40px;
+			margin-bottom: 18px;
+		}
+		.speakers{
+			max-width: 32%;
+			margin-right: 2%;
+			padding: 10px;
+		}
+		.title:nth-of-type(2){
+			padding-bottom: 18px;
+		}
+		.speakerImg{
+			border: 3px solid #fff;
+		}
+		.speakerImg:hover{
+			cursor: pointer;
+			opacity: .7;
+		}
+		.speakers .mktoGen.mktoImg{
+			display: block;
+		}
+		.speakers h3, .speakers h4, .speakers h5{
+			color: #1e85c4;
+			line-height: 24px;
+		}
+		.speakers h5{
+			margin-bottom: 18px;
+		}
+		.spd{
+			display: none;
+			position: absolute;
+			 position:absolute;
+		    left:0;
+		    right:0;
+		    top: 0;
+		    bottom: 0;
+		    margin: auto;
+			padding: 10px;
+			border-radius: 10px;
+			background-color: #fff;
+			text-align: left;
+			max-width: 50%;
+			max-height: 75%;
+			z-index: 2;
+		}
+		.speakers p{
+			color: #000;
+		}
+		.speakers .name{
+			color: #fff;
+			margin-top: 9px;
+		}
+		.speakers .close{
+			color: #1e85c4;
+			font-weight: bold;
+			font-size: 24px;
+			float: right;
+		}
+		.close:hover{
+			cursor: pointer;
+		}
+      	.share{
+          float: right;
+        }
+		footer{
+			background-color: #444;
+			color: #fff;
+			text-align: center;
+			min-height: 126px;
+		}
+		footer small{
+			height: 100%;
+			display: inline-block;
+			line-height: 126px;
+		}
+		form{
+			padding-left: 10px;
+			padding-bottom: 36px;
+		}
+		label{
+			color: #1e85c4;
+			margin-bottom: 5px;
+		}
+		button[type="submit"]{
+			padding: 5px 10px;
+			background-color: #1e85c4;
+			color: #fff;
+			border-radius: 5px;
+			border: none;
+			outline: none;
+			font-size: 16px;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+		}
+
+		/* Toggle Sections */
+		.heading1{
+			display: ${heading1Toggle};
+		}
+		.heading2{
+			display: ${heading2Toggle};
+		}
+		.heading3{
+			display: ${heading3Toggle};
+		}
+		.heading4{
+			display: ${heading4Toggle};
+		}
+		.intro{
+			display: ${introToggle};
+		}
+		.speakers:nth-of-type(1){
+			display: ${speaker1Toggle};
+		}
+		.speakers:nth-of-type(2){
+			display: ${speaker2Toggle};
+		}
+		.speakers:nth-of-type(3){
+			display: ${speaker3Toggle};
+		}
+
+		/* Media Queries */
+		@media screen and (min-width: 960px){
+			.speakers:last-of-type{
+				margin-right: 0;
+			}
+		}
+		@media screen and (max-width: 1280px){
+			header, .main, footer, .title{
+				padding-left: 10%;
+				padding-right: 10%;
+			}
+		}
+		@media screen and (max-width: 960px){
+			header, .main, footer, .title{
+				padding-left: 5%;
+				padding-right: 5%;
+			}
+			.speakers{
+				width: 49%;
+				margin-right: 2%;
+			}
+			.speakers:nth-of-type(2n+2){
+				margin-right: 0;
+			}
+		}
+		@media screen and (max-width: 760px){
+			h1{
+				font-size: 30px;
+				line-height: 36px;
+			}
+			h2{
+				font-size: 18px;
+				line-height: 18px;
+			}
+			.form, .supporting{
+				float: none;
+				width: 100%;
+			}
+			.form{
+				margin-top: 0;
+			}
+			.supporting{
+				margin-bottom: 18px;
+			}
+			.speakers{
+				display: none;
+			}
+			.speakerImg{
+				float: none;
+				width: 100%;
+				margin-right: 0;
+				text-align: center;
+			}
+          	.mktoButtonWrap{
+				margin-left: 0 !important;
+			}
+			.speakers .mktoText{
+				width: 95%;
+			}
+		}
+	</style>
+</head>
+<body>
+	<header id="mktHeader">
+		<img src="http://resources.synthesio.com/rs/synthesio/images/Synthesio-Logo-RGB-150x50.jpg" alt="Synthesio">
+		<div class="share">
+			<div class="mktoShareButton" id="exampleShareButton" mktoName="Example Share Button"></div>
+		</div>
+	</header>
+	<div class="title group">
+		<h1 class="heading1">${heading1}</h1>
+		<h2 class="heading2">${heading2}</h2>
+		<div class="intro mktoText" id="intro" mktoName="Intro">
+			<p>Intro Paragraph or other things you'd like to put here. Optional.</p>
+			<p>Intro Paragraph or other things you'd like to put here. Optional. Intro Paragraph or other things you'd like to put here. Optional. Intro Paragraph or other things you'd like to put here. Optional. Intro Paragraph or other things you'd like to put here. Optional. Intro Paragraph or other things you'd like to put here. Optional. Intro Paragraph or other things you'd like to put here. Optional. Intro Paragraph or other things you'd like to put here. Optional.</p>
+			<p>Intro Paragraph or other things you'd like to put here. Optional. Intro Paragraph or other things you'd like to put here. Optional. Intro Paragraph or other things you'd like to put here. Optional. Intro Paragraph or other things you'd like to put here. Optional.</p>
+		</div>
+	<section class="speakerContainer group">
+		<div class="supporting speakers">
+			<div class="mktoImg speakerImg" id="speaker1Img" mktoName="Speaker Image">
+				<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/webinars-full.png" alt="Synthesio Webinars">
+			</div>
+			<p class="name">${speaker1Name}, ${speaker1Title}</p>
+			<div></div>
+			<div class="spd" data-referrer="speaker1Img">
+				<p class="close">X</p>
+				<h3>${speaker1Name}</h3>
+				<h4>${speaker1Company}</h4>
+				<h5>${speaker1Title}</h5>
+				<div class="mktoText" id="speaker1Desc" mktoName="Speaker Description">
+					<p>Speaker description blah blih blah blih blah blih. In this webinar, we will help you understand how Synthesio is working to provide marketers the proof they are looking for to validate their social media work, by using IMPACT, Synthesio’s new Social ROI metrics.</p>
+           			<p>Join our webinar to learn how to incorporate executive-level social metrics that will finally answer the key questions around ROI:</p>
+				</div>
+			</div>
+		</div>
+		<div class="supporting speakers">
+			<div class="mktoImg speakerImg" id="speaker2Img" mktoName="Speaker Image">
+				<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/webinars-full.png" alt="Synthesio Webinars">
+			</div>
+			<p class="name">${speaker2Name}, ${speaker2Title}</p>
+			<div class="spd" data-referrer="speaker2Img">
+				<p class="close">X</p>
+				<h3>${speaker2Name}</h3>
+				<h4>${speaker2Company}</h4>
+				<h5>${speaker2Title}</h5>
+				<div class="mktoText" id="speaker2Desc" mktoName="Speaker Description">
+					<p>Speaker description blah blih blah blih blah blih. In this webinar, we will help you understand how Synthesio is working to provide marketers the proof they are looking for to validate their social media work, by using IMPACT, Synthesio’s new Social ROI metrics.</p>
+           			<p>Join our webinar to learn how to incorporate executive-level social metrics that will finally answer the key questions around ROI:</p>
+				</div>
+			</div>
+		</div>
+		<div class="supporting speakers">
+			<div class="mktoImg speakerImg" id="speaker3Img" mktoName="Speaker Image">
+				<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/webinars-full.png" alt="Synthesio Webinars">
+			</div>
+			<p class="name">${speaker3Name}, ${speaker3Title}</p>
+			<div class="spd" data-referrer="speaker3Img">
+				<p class="close">X</p>
+				<h3>${speaker3Name}</h3>
+				<h4>${speaker3Company}</h4>
+				<h5>${speaker3Title}</h5>
+				<div class="mktoText" id="speaker3Desc" mktoName="Speaker Description">
+					<p>Speaker description blah blih blah blih blah blih. In this webinar, we will help you understand how Synthesio is working to provide marketers the proof they are looking for to validate their social media work, by using IMPACT, Synthesio’s new Social ROI metrics.</p>
+           			<p>Join our webinar to learn how to incorporate executive-level social metrics that will finally answer the key questions around ROI:</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	</div>
+	<section class="main group" role="main">
+		<h2 class="heading3">${heading3}</h2>
+		<div class="supporting  mktoText" id="body" mktoName="Main Body">
+			<ul>
+				<li>Supporting bullets go here.</li>
+				<li>Supporting bullets go here.</li>
+				<li>Supporting bullets go here.</li>
+				<li>Supporting bullets go here.</li>
+				<li>Supporting bullets go here.</li>
+			</ul>
+			<p>In this webinar, we will help you understand how Synthesio is working to provide marketers the proof they are looking for to validate their social media work, by using IMPACT, Synthesio’s new Social ROI metrics.</p>
+           	<p>Join our webinar to learn how to incorporate executive-level social metrics that will finally answer the key questions around ROI:</p>
+		</div>
+		<aside class="form">
+			<h3>Register for the Webinar</h3>
+			<div class="mktoForm" id="form" mktoName="Signup Form">
+				
+			</div>
+		</aside>
+	</section>
+	<footer id="mktFooter" class="mktoText" mktoName="Footer">
+		<small>&copy;2015 Synthesio. All rights reserved.</small>
+	</footer>
+	<script>
+		var speakers = document.querySelectorAll('.speakers .speakerImg');
+		var closeButtons = document.querySelectorAll('.close');
+		function showSpeakerDesc(){
+			console.log(this.id);
+			this.style.opacity = '.5';
+			document.querySelector('.title').style.color = 'rgba(255, 255, 255, .5)';
+			document.querySelector('[data-referrer="' + this.id + '"]').style.display = 'block';
+		}
+		function hideSpeakerDesc(){
+			this.parentNode.style.display = 'none';
+			document.querySelector('.title').style.color = 'rgba(255, 255, 255, 1)';
+			var img = this.parentNode.getAttribute('data-referrer');
+			document.querySelector('#' + img).style.opacity = '1';
+		}
+		for(var i = 0; i < speakers.length; i++){
+			speakers[i].addEventListener('click', showSpeakerDesc, false);
+			closeButtons[i].addEventListener('click', hideSpeakerDesc, false);
+		}
+	</script>
+</body>
+</html>

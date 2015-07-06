@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html><!-- Events v1.1 -->
+<head>
+	<!-- Strings -->
+	<meta class="mktoString" id="title" mktoName="Title" default="Synthesio Events">
+	<meta class="mktoString" id="heading1" mktoName="Heading" default="I'm The Page Heading!">
+	<meta class="mktoString" id="heading2" mktoName="Subheading" default="I'm The Page Subeading!">
+	<meta class="mktoString" id="heading5" mktoName="Body Heading" default="Join Synthesio in NYC to pair your Social ROI with a fine wine">
+	<meta class="mktoString" id="month" mktoName="Month" default="December">
+	<meta class="mktoString" id="date" mktoName="Date" default="26">
+
+	<meta charset="utf-8">
+	<title>${title}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="http://resources.synthesio.com/rs/synthesio/images/reset.css" media="screen">
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+
+	<style>
+		body{
+			font-family: "PT Sans", serif;
+		}
+		h1, .h1{
+			font-size: 56px;
+			line-height: 56px;
+			margin-bottom: 18px;
+		}
+		h2, .h2{
+			font-size: 30px;
+			line-height: 36px;
+			margin-bottom: 18px;
+		}
+		h3{
+			font-size: 24px;
+			line-height: 36px;
+			margin-bottom: 18px;
+		}
+		p{
+			font-size: 16px;
+			margin-bottom: 18px;
+		}
+		ul{
+			margin-left: 20px;
+		}
+		ul li{
+			list-style-image: url(http://resources.synthesio.com/rs/297-CXJ-795/images/arrow-right-small.png);
+			margin-bottom: 10px;
+		}
+		.content{
+			color: rgba(33, 33, 33, 1);
+		}
+		.title{
+			text-transform: uppercase;
+			background: rgba(33, 33, 33, 1) url('http://resources.synthesio.com/rs/297-CXJ-795/images/pattern-event.png') repeat-x left top;
+			color: rgba(255, 255, 255, 1);
+			margin-bottom: 18px;
+		}
+		.social{
+			position: absolute;
+			top: 10px;
+			right: 20px;
+		}
+		.social a, .social a img{
+			border: none;
+			outline: none;
+			text-decoration: none;
+		}
+		.social a:hover{
+			opacity: .6;
+		}
+		.title, .main{
+			padding: 18px 20%;
+		}
+		.form{
+			background-color: #fff;
+			border-radius: 10px;
+			box-shadow: 0 0 2px 2px rgba(154, 202, 57, .7);
+			margin-top: -50px;
+			color: rgba(33, 33, 33, 1);
+			padding: 10px;
+			margin: 36px auto;
+			text-align: center;
+			width: 200px;
+		}
+		footer{
+			background-color: rgba(33, 33, 33, 1);
+			color: #fff;
+			text-align: center;
+			min-height: 126px;
+			clear: both;
+			position: fixed;
+			bottom: 0;
+			width: 100%;
+		}
+		footer small{
+			height: 100%;
+			display: inline-block;
+			line-height: 126px;
+		}
+		@media screen and (max-width: 1280px){
+			footer{
+				position: static;
+			}
+		}
+		@media screen and (max-width: 860px){
+			h1{
+				font-size: 36px;
+				line-height: 36px;
+			}
+			#heading2{
+				font-size: 24px;
+			}
+			.title{
+				z-index: 1;
+			}
+		}
+		@media screen and (max-width: 670px){
+			.title{
+				color: #fff;
+				text-align: center;
+			}
+			.social, .speakers, .clients{
+				display: none;
+			}
+			.title, .main{
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<section class="content" role="main">
+		<div class="title">
+			<h1 class="heading1">${heading1}</h1>
+			<h2 class="heading2">${heading2}</h2>
+			<nav class="social">
+				<a href="https://twitter.com/synthesio" target="New_Window">
+					<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/tw-wht-58x48.png">
+				</a>
+				<a href="https://www.facebook.com/synthesio" target="New_Window">
+					<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/fb-wht-58x48.png">
+				</a>
+				<a href="https://www.linkedin.com/company/synthesio" target="New_Window">
+					<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/ln-wht-58x58.png">
+				</a>
+			</nav>
+		</div>
+		<section class="main group" role="main">
+			<h3 class="heading5">${heading5}</h3>
+			<div class="supporting  mktoText" id="body" mktoName="Main Body">
+				<p>Join Synthesio in NYC for a networking reception and roundtable discussion on best practices for creating an effective customer-centric social intelligence program, how to effectively track and target your buyers through their customer journey, and how to focus on the right metrics to prove Business Impact. Meet our special guest, Daina Middleton - <strong>Twitter's Head of Global Business Marketing</strong> - and above all network with fellow customers and colleagues while enjoying fine wine!</p>
+	           	<p>This <strong>free</strong> event will also include:</p>
+	           	<ul>
+					<li>Tips for creating a clear roadmap for building the bridge between Social and Business metrics</li>
+					<li>Real life best practices and brand examples from Fortune 500 companies driving customer experience with social intelligence</li>
+					<li>Delicious snacks and drinks from the famous AiFiori kitchen.</li>
+				</ul>
+				<p><strong>Don't miss out  - reserve your spot today!</strong></p>
+			</div>
+			<aside class="form">
+				<h3>Share</h3>
+				<div class="mktoShareButton" id="exampleShareButton" mktoName="Example Share Button">
+					
+				</div>
+			</aside>
+		</section>
+	</section>
+	<footer id="mktFooter" class="mktoText" mktoName="Footer">
+		<small>&copy;2015 Synthesio. All rights reserved.</small>
+	</footer>
+</body>
+</html>

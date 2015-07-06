@@ -1,0 +1,7 @@
+.DS_Store
+assets/*.ai
+assets/*.psd
+assets/*.eps
+assets/.DS_Store
+node_modules
+assets/social-media-logos
