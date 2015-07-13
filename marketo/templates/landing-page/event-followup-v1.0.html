@@ -96,6 +96,24 @@
 			display: inline-block;
 			line-height: 126px;
 		}
+		.mktoShareButton{
+			display: block;
+			margin: 36px auto;
+			text-align: center;
+		}
+		#shareButton .cf_widget .cf_button_du_jour{
+			font-size: 18px;
+			padding: 10px 20px;
+			border: none;
+			background-image: none;
+			background-color: rgba(154, 202, 57, 1);
+			border: 1px solid #fff;
+		}
+		#shareButton .cf_widget .cf_button_du_jour:hover{
+			border: 1px solid rgba(154, 202, 57, 1);
+			color: rgba(154, 202, 57, .7);
+			background-color: #fff;
+		}
 		@media screen and (max-width: 1280px){
 			footer{
 				position: static;
@@ -157,12 +175,7 @@
 				</ul>
 				<p><strong>Don't miss out  - reserve your spot today!</strong></p>
 			</div>
-			<aside class="form">
-				<h3>Share</h3>
-				<div class="mktoShareButton" id="exampleShareButton" mktoName="Example Share Button">
-					
-				</div>
-			</aside>
+			<div class="mktoShareButton" id="shareButton" mktoName="Share Button"></div>
 		</section>
 	</section>
 	<footer id="mktFooter" class="mktoText" mktoName="Footer">

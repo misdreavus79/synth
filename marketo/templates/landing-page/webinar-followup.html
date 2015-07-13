@@ -79,40 +79,9 @@
 			color: #1e85c4;
 			margin-bottom: 18px;
 		}
-		.form{
-			border-radius: 5px;
-			width: 38%;
-			border: 2px solid #1e85c4;
-			box-shadow: 0 0 1px rgba(0, 0, 0, .7);
-			margin: 0 auto;
-		}
-		.form h3{
-			color: #1e85c4;
-		}
-		.supporting, .form{
-			text-align: center;
-		}
 		.supporting ul{
 			list-style: circle;
 			padding-left: 40px;
-			margin-bottom: 18px;
-		}
-		.speakers{
-			margin-bottom: 18px;
-		}
-		.title:nth-of-type(2){
-			padding-bottom: 18px;
-		}
-		.speakerImg{
-			float: left;
-			width: 50%;
-			margin: 0 10px 10px 0;
-			border: 3px solid #1e85c4;
-		}
-		.speakers h3, .speakers h4, .speakers h5{
-			color: #1e85c4;
-		}
-		.speakers h5{
 			margin-bottom: 18px;
 		}
 		footer{
@@ -120,30 +89,14 @@
 			color: #fff;
 			text-align: center;
 			min-height: 126px;
+			width: 100%;
+			position: fixed;
+			bottom: 0;
 		}
 		footer small{
 			height: 100%;
 			display: inline-block;
 			line-height: 126px;
-		}
-		form{
-			padding-left: 10px;
-			padding-bottom: 36px;
-		}
-		label{
-			color: #1e85c4;
-			margin-bottom: 5px;
-		}
-		button[type="submit"]{
-			padding: 5px 10px;
-			background-color: #1e85c4 !important;
-			color: #fff !important;
-			border-radius: 5px;
-			border: none;
-			outline: none;
-			font-size: 16px;
-			letter-spacing: 1px;
-			text-transform: uppercase;
 		}
 		/* Show/Hide Sections */
 		.heading1{
@@ -160,6 +113,24 @@
 		}
 		#introImg{
 			display: ${introImgToggle};
+		}
+		.mktoShareButton{
+			display: block;
+			margin: 36px auto;
+			text-align: center;
+		}
+		#shareButton .cf_widget .cf_button_du_jour{
+			font-size: 18px;
+			padding: 10px 20px;
+			border: none;
+			background-image: none;
+			background-color: #1e85c4;
+			border: 1px solid #fff;
+		}
+		#shareButton .cf_widget .cf_button_du_jour:hover{
+			border: 1px solid #1e85c4;
+			color: #1e85c4;
+			background-color: #fff;
 		}
 		/* Media Queries */
 		@media screen and (min-width: 960px){
@@ -228,9 +199,6 @@
 	<div class="title">
 		<h1 class="heading1">${heading1}</h1>
 		<h2 class="heading2">${heading2}</h2>
-		<div class="mktoImg" id="introImg" mktoName="Intro Image">
-			<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/webinars-full.png" alt="Synthesio Webinars">
-		</div>
 	</div>
 	<section class="main group" role="main">
 		<h2>${heading3}</h2>
@@ -245,10 +213,7 @@
 			<p>In this webinar, we will help you understand how Synthesio is working to provide marketers the proof they are looking for to validate their social media work, by using IMPACT, Synthesio’s new Social ROI metrics.</p>
            	<p>Join our webinar to learn how to incorporate executive-level social metrics that will finally answer the key questions around ROI:</p>
 		</div>
-		<aside class="form">
-			<h3>Share</h3>
-			<div class="mktoShareButton" id="exampleShareButton" mktoName="Example Share Button"></div>
-		</aside>
+		<div class="mktoShareButton" id="shareButton" mktoName="Share Button"></div>
 	</section>
 	<footer id="mktFooter" class="mktoText" mktoName="Footer">
 		<small>&copy;2015 Synthesio. All rights reserved.</small>
