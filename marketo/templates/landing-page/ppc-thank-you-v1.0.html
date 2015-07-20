@@ -17,15 +17,18 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="http://resources.synthesio.com/rs/synthesio/images/reset.css" media="screen">
+	<script>
+		var uniqueId = document.cookie.replace(/(?:(?:^|.*;\s*)marinId\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+	</script>
 	<!-- BEGIN: Marin Software Tracking Script (Confirmation Page) -->
 	<script type='text/javascript'>
 	var _mTrack = _mTrack || [];
 	_mTrack.push(['addTrans', {
 	    currency :'USD',
 	    items : [{
-	        orderId : '@ORDER-ID@',
+	        orderId : uniqueId,
 	        convType : 'sfdc_lead',
-	        price :    '@PRICE@'
+	        price :    '0'
 	    }]
 	}]);
 	_mTrack.push(['processOrders']);

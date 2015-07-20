@@ -474,5 +474,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80c5001a', e
 	<footer id="mktFooter" class="mktoText" mktoName="Footer">
 		<small>&copy;2015 Synthesio. All rights reserved.</small>
 	</footer>
+	<script>
+		var date = new Date();
+		date = date.getTime();
+		var uniqueId = 'MID-' + Math.floor(Math.random() * 1000) + 1 + '-' + date;
+		document.cookie = 'marinId=' + uniqueId;
+		MktoForms2.whenReady(function (form) {
+		    console.log(uniqueId);
+		    document.querySelector('input[name="marinuniqueid"]').value = uniqueId;
+		});
+	</script>
 </body>
 </html>

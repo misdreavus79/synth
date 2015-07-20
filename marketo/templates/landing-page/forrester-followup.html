@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html><!-- PPC v1.1 -->
+<head>
+	<!-- Strings -->
+	<meta class="mktoString" id="title" mktoName="Title" default="Synthesio Webinars">
+	<meta class="mktoString" id="heading1" mktoName="Heading" default="I'm The Page Heading!">
+	<meta class="mktoString" id="heading2" mktoName="Subheading" default="I'm The Page Subeading!">
+	<meta class="mktoString" id="heading3" mktoName="Main Body Title" default="Thank You!">
+
+	<!-- Booleans -->
+	<meta class="mktoBoolean" id="heading1Toggle" mktoName="Heading" default="true" true_value="block" false_value="none">
+	<meta class="mktoBoolean" id="heading2Toggle" mktoName="Subeading" default="true" true_value="block" false_value="none">
+	<meta class="mktoBoolean" id="heading3Toggle" mktoName="Main Body Title" default="true" true_value="block" false_value="none">
+	<meta class="mktoBoolean" id="heading4Toggle" mktoName="Speakers Title" default="true" true_value="block" false_value="none">
+
+	<title>${title}</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="http://resources.synthesio.com/rs/synthesio/images/reset.css" media="screen">
+	<script>
+		var uniqueId = document.cookie.replace(/(?:(?:^|.*;\s*)marinId\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+	</script>
+	<!-- BEGIN: Marin Software Tracking Script (Confirmation Page) -->
+	<script type='text/javascript'>
+	var _mTrack = _mTrack || [];
+	_mTrack.push(['addTrans', {
+	    currency :'USD',
+	    items : [{
+	        orderId : uniqueId,
+	        convType : 'sfdc_lead',
+	        price :    '0'
+	    }]
+	}]);
+	_mTrack.push(['processOrders']);
+	(function() {
+	    var mClientId = '5890x150161';
+	    var mProto = (('https:' == document.location.protocol) ? 'https://' : 'http://');
+	    var mHost = 'tracker.marinsm.com';
+	    var mt = document.createElement('script'); mt.type = 'text/javascript'; mt.async = true; mt.src = mProto + mHost + '/tracker/async/' + mClientId + '.js';
+	    var fscr = document.getElementsByTagName('script')[0]; fscr.parentNode.insertBefore(mt, fscr);
+	})();
+	</script>
+	<noscript>
+	<img width="1" height="1" src="https://tracker.marinsm.com/tp?act=2&cid=5890x150161&script=no" />
+	</noscript>
+	<!-- END: Copyright Marin Software -->
+	<!-- Facebook Conversion Code for Leads - Synthesio -->
+	<script>(function() {
+	  var _fbq = window._fbq || (window._fbq = []);
+	  if (!_fbq.loaded) {
+	    var fbds = document.createElement('script');
+	    fbds.async = true;
+	    fbds.src = '//connect.facebook.net/en_US/fbds.js';
+	    var s = document.getElementsByTagName('script')[0];
+	    s.parentNode.insertBefore(fbds, s);
+	    _fbq.loaded = true;
+	  }
+	})();
+	window._fbq = window._fbq || [];
+	window._fbq.push(['track', '6024974926950', {'value':'0.00','currency':'USD'}]);
+	</script>
+	<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6024974926950&amp;cd[value]=0.00&amp;cd[currency]=USD&amp;noscript=1" /></noscript>
+	<style>
+		body{
+			font-family: 'Helvetica Neue', Helvetica, sans-serif;
+		}
+		h1{
+			font-size: 72px;
+			line-height: 72px;
+			margin-bottom: 18px;
+			margin-top: 72px;
+			clear: both;
+		}
+		h2{
+			font-size: 54px;
+			line-height: 54px;
+			margin-bottom: 72px;
+		}
+		h3{
+			font-size: 36px;
+			line-height: 36px;
+			margin-bottom: 18px;
+		}
+		h4, h5{
+			font-size: 18px;
+			font-weight: normal;
+		}
+		p{
+			font-size: 16px;
+			line-height: 18px;
+			margin-bottom: 18px;
+		}
+		header, .main, footer, .title{
+			padding: 0 20%;
+		}
+		img{
+			max-width: 100%;
+		}
+		.mktoImg{
+			line-height: 0;
+		}
+		header{
+			color: #fff;
+			background-image: url(http://resources.synthesio.com/rs/297-CXJ-795/images/forrester-bg-low-res.jpg);
+			padding-top: 18px;
+			padding-bottom: 18px;
+			text-align: center;
+			position: relative
+		}
+		.logo{
+			float: left;
+		}
+		.main{
+			padding-bottom: 18px;
+		}
+		.heading3{
+			padding-top: 18px;
+		}
+		.supporting ul{
+			list-style: circle;
+			padding-left: 40px;
+			margin-bottom: 18px;
+		}
+
+		footer{
+			background-color: #444;
+			color: #fff;
+			text-align: center;
+			min-height: 126px;
+			position: fixed;
+			width: 100%;
+			bottom: 0;
+		}
+		footer small{
+			height: 100%;
+			display: inline-block;
+			line-height: 126px;
+		}
+		/* Toggle Sections */
+		.heading1{
+			display: ${heading1Toggle};
+		}
+		.heading2{
+			display: ${heading2Toggle};
+		}
+		.heading3{
+			display: ${heading3Toggle};
+		}
+		.heading4{
+			display: ${heading4Toggle};
+		}
+		a[download]{
+			display: block;
+			margin: 36px auto 18px;
+			width: 200px;
+			padding: 20px;
+			background-color: rgba(154, 202, 57, 1);
+			color: #fff;
+			font-weight: bold;
+			text-align: center;
+		}
+
+		/* Media Queries */
+		@media screen and (max-width: 1280px){
+			header, .main, footer, .title{
+				padding-left: 10%;
+				padding-right: 10%;
+			}
+		}
+		@media screen and (max-width: 960px){
+			header, .main, footer, .title{
+				padding-left: 5%;
+				padding-right: 5%;
+			}
+		}
+		@media screen and (max-width: 760px){
+			h1{
+				font-size: 30px;
+				line-height: 36px;
+			}
+			h2{
+				font-size: 18px;
+				line-height: 18px;
+			}
+			.supporting{
+				margin-bottom: 18px;
+			}
+			header:before{
+				background: none;
+			}
+			footer{
+				position: static;
+			}
+		}
+	</style>
+</head>
+<body>
+	<header id="mktHeader">
+		<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/synthesio-wht-250x48.png" alt="Synthesio" class="logo">
+		<h1 class="heading1">${heading1}</h1>
+		<h2 class="heading2">${heading2}</h2>
+	</header>
+	<section class="main group" role="main">
+		<h3 class="heading3">${heading3}</h3>
+		<article class="supporting  mktoText" id="body" mktoName="Main Body">
+			<ul>
+				<li>Supporting bullets go here.</li>
+				<li>Supporting bullets go here.</li>
+				<li>Supporting bullets go here.</li>
+				<li>Supporting bullets go here.</li>
+				<li>Supporting bullets go here.</li>
+			</ul>
+			<p>In this webinar, we will help you understand how Synthesio is working to provide marketers the proof they are looking for to validate their social media work, by using IMPACT, Synthesio’s new Social ROI metrics.</p>
+           	<p>Join our webinar to learn how to incorporate executive-level social metrics that will finally answer the key questions around ROI:</p>
+		</article>
+		<a href="http://resources.synthesio.com/rs/297-CXJ-795/images/The-Forrester-Wave_Enterprise-Listening-Platforms_Q1-2014.pdf" download>Download Report</a>
+	</section>
+	<footer id="mktFooter" class="mktoText" mktoName="Footer">
+		<small>&copy;2015 Synthesio. All rights reserved.</small>
+	</footer>
+</body>
+</html>
