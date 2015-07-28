@@ -70,7 +70,7 @@
 			text-transform: uppercase;
 		}
 		.form h3{
-			color: #fff;
+			color: rgba(32,28,142,1);
 			text-align: center;
 			font-size: 21px;
 			line-height: 36px;
@@ -88,13 +88,41 @@
 		}
 		.main, .about{
 			color: #fff;
-			background: #8012d4;
 			box-shadow: 0px 0px 1px rgba(0, 0, 0, .6);
 		}
 		.main{
 			padding-top: 72px;
 			padding-bottom: 72px;
-			background-image: url(http://resources.synthesio.com/rs/297-CXJ-795/images/pattern-4.png)
+			/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#201c8e+0,7db9e8+100&amp;0.8+0,0.5+100 */
+background: -moz-linear-gradient(top,  rgba(32,28,142,0.8) 0%, rgba(125,185,232,0.5) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(32,28,142,0.8)), color-stop(100%,rgba(125,185,232,0.5))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(32,28,142,0.8) 0%,rgba(125,185,232,0.5) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(32,28,142,0.8) 0%,rgba(125,185,232,0.5) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(32,28,142,0.8) 0%,rgba(125,185,232,0.5) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(32,28,142,0.8) 0%,rgba(125,185,232,0.5) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc201c8e', endColorstr='#807db9e8',GradientType=0 ); /* IE6-9 */
+
+			position: relative;
+		}
+		.main:after{
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			background: url(http://resources.synthesio.com/rs/297-CXJ-795/images/ebooks-bg.jpg) no-repeat 50% 50%;
+			z-index: -1;
+			width: 100%;
+			height: 100%;
+		}
+		.main:before{
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			background: url(http://resources.synthesio.com/rs/297-CXJ-795/images/pattern-4.png);
+			z-index: 2;
+			width: 100%;
+			height: 100%;
 		}
 		.intro{
 			width: 60%;
@@ -103,6 +131,8 @@
 			border-radius: 5px 5px 0 0;
 			padding-left: 20px;
 			padding-bottom: 36px;
+			position: relative;
+			z-index: 4;
 		}
 		.mktoContent, .form{
 			float: left;
@@ -121,7 +151,7 @@
 			padding-top: 18px;
 			background: #fff;
 			border-radius: 5px;
-			background-color: #8012d4;
+			border: 1px solid rgba(32,28,142,1);
   			margin-top: 18px;
 			/*width: 320px;
 			padding-top: 18px;
@@ -130,10 +160,9 @@
 			position: absolute;
 			right: 20%;
 			bottom: -30%;
-			box-shadow: 0 0 2px 2px#8012d4;*/
+			box-shadow: 0 0 2px 2pxrgba(32,28,142,1);*/
 		}
 		label{
-			color: #fff;
 			margin-bottom: 5px !important;
 		}
 		label[for="Email_Opt_In__c"] {
@@ -143,15 +172,15 @@
 			margin: 0 auto;
 		}
 		button[type="submit"]{
-			background-color: #8012d4;
+			background-color: rgba(32,28,142,1);
 			color: #fff;
 			border: 1px solid #fff;
 			transition: all .3s ease;
 		}
 		button[type="submit"]:hover, button[type="submit"]:focus{
 			background-color: #fff;
-			border-color: #8012d4;
-			color: #8012d4;
+			border-color: rgba(32,28,142,1);
+			color: rgba(32,28,142,1);
 		}
 		.supporting{
 			padding: 18px 20%;
@@ -181,6 +210,7 @@
 			background-repeat: no-repeat;
 			padding-top: 18px;
 			padding-bottom: 18px;
+			background-color: rgba(32,28,142,1);
 		}
 		.clients .mktoImg{
 			display: inline-block;
@@ -252,7 +282,7 @@
 	<header id="mktHeader">
 		<img src="http://resources.synthesio.com/rs/synthesio/images/Synthesio-Logo-RGB-150x50.jpg" alt="Synthesio">
 	</header>
-	<section class="main group" role="main">
+	<section class="main" role="main">
 		<h1 class="heading1">${heading1}</h1>
 		<h2 class="heading2">${heading2}</h2>
 	</section>
