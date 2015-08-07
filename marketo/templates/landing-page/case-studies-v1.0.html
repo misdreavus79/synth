@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<!-- Strings -->
+	<meta class="mktoString" id="title" mktoName="Title" default="Synthesio">
+	<meta class="mktoString" id="heading1" mktoName="Heading" default="I'm The Page Heading!">
+	<meta class="mktoString" id="heading2" mktoName="Subheading" default="I'm The Page Subeading!">
+	<meta class="mktoString" id="heading4" mktoName="Form Heading" default="Download Now">
+
+
+	<!-- Booleans -->
+	<meta class="mktoBoolean" id="heading1Toggle" mktoName="Heading" default="true" true_value="block" false_value="none">
+	<meta class="mktoBoolean" id="heading2Toggle" mktoName="Subeading" default="true" true_value="block" false_value="none">
+	<meta class="mktoBoolean" id="heading4Toggle" mktoName="Form Heading" default="true" true_value="block" false_value="none">
+	<meta class="mktoBoolean" id="pitchToggle" mktoName="Pitch" default="true" true_value="block" false_value="none">
+	<meta class="mktoBoolean" id="supportingToggle" mktoName="Supporting" default="true" true_value="block" false_value="none">
+
+	<title>${title}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="http://resources.synthesio.com/rs/synthesio/images/reset.css" media="screen">
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,300' rel='stylesheet' type='text/css'>
+	<style>
+		/* --- Boolean Toggles --- */
+		.heading1{
+			display: ${heading1Toggle};
+		}
+		.heading2{
+			display: ${heading2Toggle};
+		}
+		.heading4{
+			display: ${heading4Toggle};
+		}
+		#pitch{
+			display: ${pitchToggle};
+		}
+		#supporting{
+			display: ${supportingToggle};
+		}
+		body{
+			font-family: 'Raleway', 'Helvetica Neue', Helvetica, sans-serif;
+			letter-spacing: .1em;
+		}
+		h1{
+			font-size: 54px;
+			line-height: 54px;
+			margin-bottom: 18px;
+			margin-top: 18px;
+			text-transform: uppercase;
+			text-align: center;
+		}
+		h2{
+			text-align: center;
+		}
+		h2, h3{
+			font-size: 24px;
+			line-height: 36px;
+			margin-bottom: 18px;
+			text-transform: uppercase;
+		}
+		.form h3{
+			color: #212121;
+			text-align: center;
+			font-size: 30px;
+			line-height: 36px;
+			position: relative;
+		}
+		.form h3:before{
+			content: '';
+			width: 100%;
+			background-color: #f00;
+			border: 1px solid #f00;
+			position: absolute;
+			left: 0;
+			top: 50%;
+		}
+		.lCover{
+			background: #fff;
+			width: auto;
+			z-index: 1;
+		}
+		p{
+			font-size: 16px;
+			line-height: 18px;
+			margin-bottom: 18px;
+		}
+		header, .main, footer, .about, .clients{
+			padding: 0 20%;
+		}
+		header{
+			height: 54px;
+		}
+		.main, .about{
+			color: #fff;
+			background: #212121;
+			padding-top: 18px;
+		}
+		.main{
+			background-image: url('http://resources.synthesio.com/rs/297-CXJ-795/images/case-studies-bg.png');
+		}
+		.graphic{
+			display: block;
+			margin: 0 auto;
+		}
+		.about{
+			padding-bottom: 18px;
+		}
+		.form{
+			padding-top: 18px;
+			background: #fff;
+			border-radius: 5px;
+		}
+		label[for="Email_Opt_In__c"] {
+		  width: 200px !important;
+		}
+		.mktoForm{
+			margin: 0 auto;
+		}
+		button[type="submit"]{
+			background-color: #212121;
+			color: #fff;
+			border: 1px solid #fff;
+			transition: all .3s ease;
+		}
+		button[type="submit"]:hover, button[type="submit"]:focus{
+			background-color: #fff;
+			border-color: #212121;
+			color: #212121;
+		}
+		.supporting{
+			padding: 18px 20%;
+		}
+		.supporting ul{
+			list-style: circle;
+			padding-left: 20px;
+		}
+		.subsection{
+			float: left;
+			width: 31%;
+			margin-right: 2%;
+		}
+		.subsection:last-child{
+			margin-right: 0;
+		}
+		.subsection:last-child{
+			margin-right: 0;
+		}
+		.about, .clients{
+			margin-top: 36px;
+		}
+		.about{
+			background-image: url(http://resources.synthesio.com/rs/297-CXJ-795/images/synthesio-mark.png);
+			background-position: left 50%;
+			background-repeat: no-repeat;
+		}
+		.clients .mktoImg{
+			display: inline-block;
+			width: 25%;
+			margin-bottom: 10px;
+			text-align: center;
+		}
+		footer{
+			background-color: #444;
+			color: #fff;
+			text-align: center;
+			min-height: 126px;
+		}
+		footer small{
+			height: 100%;
+			display: inline-block;
+			line-height: 126px;
+		}
+		/* Media Queries */
+		@media screen and (max-width: 1280px){
+			header, .main, .supporting, footer, .about, .clients{
+				padding-left: 10%;
+				padding-right: 10%;
+			}
+			.form{
+				width: 28%;
+			}
+		}
+		@media screen and (max-width: 960px){
+			header, .main, .supporting, footer, .about, .clients{
+				padding-left: 5%;
+				padding-right: 5%;
+			}
+		}
+		@media screen and (max-width: 760px){
+			.form, .subsection{
+				float: none;
+				width: 100%;
+			}
+			.form{
+				margin-top: 0;
+			}
+			.subsection{
+				margin-bottom: 18px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<header id="mktHeader">
+		<img src="http://resources.synthesio.com/rs/synthesio/images/Synthesio-Logo-RGB-150x50.jpg" alt="Synthesio">
+	</header>
+	<section class="main" role="main">
+		<h1 class="heading1">${heading1}</h1>
+		<h2 class="heading2">${heading2}</h2>
+		<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/case-studies-graphic.png" alt="Synthesio Case Studies" class="graphic">
+	</section>
+	<section class="supporting" id="pitch">
+		<div class="mainPitch  mktoText" id="mainPitch" mktoName="Pitch">
+			<p>Supporting paragraphs go here.</p>
+			<p>Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+			<p>Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+		</div>
+		<aside class="form">
+			<h3><span class="lCover">${heading4}</span></h3>
+			<div class="mktoForm" id="form" mktoName="Signup Form">
+				
+			</div>
+		</aside>
+	</section>
+	<section class="supporting group" id="supporting">
+		<div class="subsection  mktoText" id="sub1" mktoName="Supporting 1">
+			<ul>
+				<li>Supporting bullets go here.</li>
+				<li>Supporting bullets go here.</li>
+				<li>Supporting bullets go here.</li>
+				<li>Supporting bullets go here.</li>
+				<li>Supporting bullets go here.</li>
+			</ul>
+		</div>
+		<div class="subsection  mktoText" id="sub2" mktoName="Supporting 2">
+			<p>Supporting paragraphs go here.</p>
+			<p>Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+			<p>Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+		</div>
+		<div class="subsection  mktoText" id="sub3" mktoName="Supporting 3">
+			<ul>
+				<li>Supporting bullets go here.</li>
+				<li>Supporting bullets go here.</li>
+				<li>Supporting bullets go here.</li>
+				<li>Supporting bullets go here.</li>
+				<li>Supporting bullets go here.</li>
+			</ul>
+		</div>
+	</section>
+	<section class="about mktoText" id="about" mktoName="About Synthesio">
+		<h3>About Synthesio</h3>
+		<p>Synthesio, named the leader in a 2014 report looking at global Social Intelligence platforms. Used by some of the world's top brands, and the agencies that support them, Synthesio is the framework for building social intelligence that provides real business results. Whether an organization's social team is built within Marketing or crosses multiple departments, business units or geographies, Synthesio helps teams listen to, and analyze, consumer conversations across social and mainstream media within one platform. Founded in 2006, Synthesio has offices in New York, Paris, London, and Singapore.</p>
+	</section>
+	<section class="clients group">
+		<h3>Our Clients</h3>
+		<div class="mktoImg" id="client1" mktoName="Client 1 Image">
+			<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/capital-one.png" alt="Vodafone">
+		</div><!-- //inline-block hack
+		--><div class="mktoImg" id="client2" mktoName="Client 2 Image">
+			<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/mcdonalds.png" alt="Ford">
+		</div><!-- //inline-block hack
+		--><div class="mktoImg" id="client3" mktoName="Client 3 Image">
+			<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/loreal.png" alt="L'Oréal Paris">
+		</div><!-- //inline-block hack
+		--><div class="mktoImg" id="client4" mktoName="Client 4 Image">
+			<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/ford.png" alt="McDonalds">
+		</div><!-- //inline-block hack
+		--><div class="mktoImg" id="client5" mktoName="Client 5 Image">
+			<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/microsoft.png" alt="Microsoft">
+		</div><!-- //inline-block hack
+		--><div class="mktoImg" id="client6" mktoName="Client 6 Image">
+			<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/nissan.png" alt="Nissan">
+		</div><!-- //inline-block hack
+		--><div class="mktoImg" id="client7" mktoName="Client 7 Image">
+			<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/peugeot.png" alt="Peugeot">
+		</div><!-- //inline-block hack
+		--><div class="mktoImg" id="client8" mktoName="Client 8 Image">
+			<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/sony.png" alt="Sony">
+		</div><!-- //inline-block hack
+		--><div class="mktoImg" id="client9" mktoName="Client 9 Image">
+			<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/t-mobile.png" alt="T-Mobile">
+		</div><!-- //inline-block hack
+		--><div class="mktoImg" id="client10" mktoName="Client 10 Image">
+			<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/ubisoft.png" alt="Ubisoft">
+		</div><!-- //inline-block hack
+		--><div class="mktoImg" id="client11" mktoName="Client 11 Image">
+			<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/virgin-atlantic.png" alt="Virgin Atlantic">
+		</div><!-- //inline-block hack
+		--><div class="mktoImg" id="client12" mktoName="Client 12 Image">
+			<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/vodafone.png" alt="Vodafone">
+		</div>
+	</section>
+	<footer id="mktFooter" class="mktoText" mktoName="Footer">
+		<small>&copy;2015 Synthesio. All rights reserved.</small>
+	</footer>
+</body>
+</html>
