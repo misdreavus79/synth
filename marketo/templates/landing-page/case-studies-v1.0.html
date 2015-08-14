@@ -6,12 +6,14 @@
 	<meta class="mktoString" id="title" mktoName="Title" default="Synthesio">
 	<meta class="mktoString" id="heading1" mktoName="Heading" default="I'm The Page Heading!">
 	<meta class="mktoString" id="heading2" mktoName="Subheading" default="I'm The Page Subeading!">
+	<meta class="mktoString" id="heading3" mktoName="Pitch Heading" default="I'm the Pitch!">
 	<meta class="mktoString" id="heading4" mktoName="Form Heading" default="Download Now">
 
 
 	<!-- Booleans -->
 	<meta class="mktoBoolean" id="heading1Toggle" mktoName="Heading" default="true" true_value="block" false_value="none">
 	<meta class="mktoBoolean" id="heading2Toggle" mktoName="Subeading" default="true" true_value="block" false_value="none">
+	<meta class="mktoBoolean" id="heading3Toggle" mktoName="Pitch Heading" default="true" true_value="block" false_value="none">
 	<meta class="mktoBoolean" id="heading4Toggle" mktoName="Form Heading" default="true" true_value="block" false_value="none">
 	<meta class="mktoBoolean" id="pitchToggle" mktoName="Pitch" default="true" true_value="block" false_value="none">
 	<meta class="mktoBoolean" id="supportingToggle" mktoName="Supporting" default="true" true_value="block" false_value="none">
@@ -27,6 +29,9 @@
 		}
 		.heading2{
 			display: ${heading2Toggle};
+		}
+		.heading3{
+			display: ${heading3Toggle};
 		}
 		.heading4{
 			display: ${heading4Toggle};
@@ -64,20 +69,11 @@
 			font-size: 30px;
 			line-height: 36px;
 			position: relative;
-		}
-		.form h3:before{
-			content: '';
-			width: 100%;
-			background-color: #f00;
-			border: 1px solid #f00;
-			position: absolute;
-			left: 0;
-			top: 50%;
+			background: #fff url('http://resources.synthesio.com/rs/297-CXJ-795/images/horizontal-hr.png') repeat-x left 50%;
 		}
 		.lCover{
 			background: #fff;
-			width: auto;
-			z-index: 1;
+			padding: 0 5px;
 		}
 		p{
 			font-size: 16px;
@@ -108,24 +104,75 @@
 		.form{
 			padding-top: 18px;
 			background: #fff;
-			border-radius: 5px;
+			border-bottom: 1px solid #212121;
+		}
+		label{
+			font-size: 16px;
+			width: 100% !important;
+			margin-bottom: 5px !important;
+		}
+		input, select{
+			width: 100% !important;
+			height: 30px;
+		}
+		select{
+			font-size: 30px !important;
+			margin-top: 5px !important;
 		}
 		label[for="Email_Opt_In__c"] {
-		  width: 200px !important;
+		  width: 100% !important;
+		  padding-left: 30px !important;
+		}
+		.mktoLogicalField.mktoCheckboxList.mktoHasWidth{
+			position: absolute;
 		}
 		.mktoForm{
 			margin: 0 auto;
+			width: 100% !important;
+		}
+		.mktoForm .mktoFormRow{
+			clear: none !important;
+			float: left;
+			width: 32%;
+			margin-right: 2%;
+		}
+		.mktoFormCol, .mktoFieldWrap{
+			width: 100%;
+		}
+		.mktoForm .mktoFormRow:nth-of-type(3n){
+			margin-right: 0;
+		}
+		.mktoButtonRow{
+			display: block !important;
 		}
 		button[type="submit"]{
 			background-color: #212121;
 			color: #fff;
 			border: 1px solid #fff;
 			transition: all .3s ease;
+			float: right;
+			height: 56px;
+			display: block;
+			font-size: 24px !important;
+			position: relative;
+		}
+		button[type="submit"]:after{
+		    width: 0;
+		    height: 0;
+		    position: absolute;
+		    border-left: 28px solid #212121;
+		    border-top: 27px solid transparent;
+		    border-bottom: 27px solid transparent;
+		    content: '';
+		    right: -28px;
+		    top: 0;
+		    transition: all .3s ease;
 		}
 		button[type="submit"]:hover, button[type="submit"]:focus{
-			background-color: #fff;
-			border-color: #212121;
-			color: #212121;
+			background-color: rgba(154, 202,  57, 1);
+		}
+		button[type="submit"]:hover:after, button[type="submit"]:focus:after{
+			border-left-color: rgba(154, 202, 57, 1);
 		}
 		.supporting{
 			padding: 18px 20%;
@@ -176,9 +223,6 @@
 				padding-left: 10%;
 				padding-right: 10%;
 			}
-			.form{
-				width: 28%;
-			}
 		}
 		@media screen and (max-width: 960px){
 			header, .main, .supporting, footer, .about, .clients{
@@ -197,6 +241,11 @@
 			.subsection{
 				margin-bottom: 18px;
 			}
+			.mktoForm .mktoFormRow{
+				clear: both !important;
+				width: 100%;
+				margin-right: 0;
+			}
 		}
 	</style>
 </head>
@@ -210,12 +259,13 @@
 		<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/case-studies-graphic.png" alt="Synthesio Case Studies" class="graphic">
 	</section>
 	<section class="supporting" id="pitch">
+		<h3 class="heading3">${heading3}</h3>
 		<div class="mainPitch  mktoText" id="mainPitch" mktoName="Pitch">
-			<p>Supporting paragraphs go here.</p>
+			<p>Intro paragraphs and pitch go here. Use this space to captivate the user with how awesome Synthesio is and how their lives will be more meaningful once they read this case study.</p>
 			<p>Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
 			<p>Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
 		</div>
-		<aside class="form">
+		<aside class="form group">
 			<h3><span class="lCover">${heading4}</span></h3>
 			<div class="mktoForm" id="form" mktoName="Signup Form">
 				
@@ -225,24 +275,23 @@
 	<section class="supporting group" id="supporting">
 		<div class="subsection  mktoText" id="sub1" mktoName="Supporting 1">
 			<ul>
-				<li>Supporting bullets go here.</li>
-				<li>Supporting bullets go here.</li>
-				<li>Supporting bullets go here.</li>
-				<li>Supporting bullets go here.</li>
+				<li>Case Study specifics go here.</li>
+				<li>This is free-form content.</li>
+				<li>It can be changed to whatever you want.</li>
+				<li>As long as it stays within the page branding.</li>
 				<li>Supporting bullets go here.</li>
 			</ul>
 		</div>
 		<div class="subsection  mktoText" id="sub2" mktoName="Supporting 2">
-			<p>Supporting paragraphs go here.</p>
-			<p>Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-			<p>Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+			<p>Case Study specifics go here.</p>
+			<p>This is free-form content. It can be changed to whatever you want. As long as it stays within the page branding. As long as it stays within the page branding.</p>
 		</div>
 		<div class="subsection  mktoText" id="sub3" mktoName="Supporting 3">
 			<ul>
-				<li>Supporting bullets go here.</li>
-				<li>Supporting bullets go here.</li>
-				<li>Supporting bullets go here.</li>
-				<li>Supporting bullets go here.</li>
+				<li>Case Study specifics go here.</li>
+				<li>This is free-form content.</li>
+				<li>It can be changed to whatever you want.</li>
+				<li>As long as it stays within the page branding.</li>
 				<li>Supporting bullets go here.</li>
 			</ul>
 		</div>
