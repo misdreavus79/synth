@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html><!-- Forrester v1.0 -->
+<head>
+	<!-- Strings -->
+	<meta class="mktoString" id="title" mktoName="Title" default="Synthesio Webinars">
+	<meta class="mktoString" id="heading1" mktoName="Heading" default="I'm The Page Heading!">
+	<meta class="mktoString" id="heading2" mktoName="Subheading" default="I'm The Page Subeading!">
+	<meta class="mktoString" id="heading3" mktoName="Main Body Title" default="I'm The Main Body Title!">
+	<meta class="mktoString" id="heading4" mktoName="Form Title" default="Request Your demo">
+	<meta class="mktoString" id="bubble1" mktoName="Green Bubble" default="Listen">
+	<meta class="mktoString" id="bubble2" mktoName="Orange Bubble" default="Analyze">
+	<meta class="mktoString" id="bubble3" mktoName="Blue Bubble" default="Collaborate">
+	<meta class="mktoString" id="bubble4" mktoName="Red Bubble" default="Connect">
+	<meta class="mktoString" id="bubble5" mktoName="Purple Bubble" default="Measure ROI">
+	
+
+
+	<!-- Booleans -->
+	<meta class="mktoBoolean" id="heading1Toggle" mktoName="Heading" default="true" true_value="block" false_value="none">
+	<meta class="mktoBoolean" id="heading2Toggle" mktoName="Subeading" default="true" true_value="block" false_value="none">
+	<meta class="mktoBoolean" id="heading3Toggle" mktoName="Main Body Title" default="true" true_value="block" false_value="none">
+	<meta class="mktoBoolean" id="heading4Toggle" mktoName="Speakers Title" default="true" true_value="block" false_value="none">
+
+
+	<title>${title}</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="http://resources.synthesio.com/rs/synthesio/images/reset.css" media="screen">
+	<!-- BEGIN: Marin Software Tracking Script (Landing Page) -->
+	<script type='text/javascript'>
+	var _mTrack = _mTrack || [];
+	_mTrack.push(['trackPage']);
+
+	(function() {
+	var mClientId = '5890x150161';
+	var mProto = (('https:' == document.location.protocol) ? 'https://' : 'http://');
+	var mHost = 'tracker.marinsm.com';
+
+	var mt = document.createElement('script'); mt.type = 'text/javascript'; mt.async = true; mt.src = mProto + mHost + '/tracker/async/' + mClientId + '.js';
+	var fscr = document.getElementsByTagName('script')[0]; fscr.parentNode.insertBefore(mt, fscr);
+	})();
+	</script>
+	<noscript>
+	<img width="1" height="1" src="https://tracker.marinsm.com/tp?act=1&cid=5890x150161&script=no" />
+	</noscript>
+	<!-- END: Copyright Marin Software -->
+	<style>
+		body{
+			font-family: 'Helvetica Neue', Helvetica, sans-serif;
+		}
+		h1{
+			font-size: 54px;
+			line-height: 54px;
+			margin-bottom: 18px;
+			margin-top: 36px;
+			clear: both;
+		}
+		h2{
+			font-size: 36px;
+			line-height: 36px;
+			margin-bottom: 18px;
+		}
+		h1, h2{
+			margin-right: 570px;
+		}
+		h3{
+			font-size: 27px;
+			line-height: 36px;
+			margin-bottom: 18px;
+		}
+		h4, h5{
+			font-size: 18px;
+			font-weight: normal;
+		}
+		.form h3{
+			color: #fff;
+			text-align: center;
+			font-size: 21px;
+		}
+		p{
+			font-size: 16px;
+			line-height: 18px;
+			margin-bottom: 18px;
+		}
+		header, .main, footer, .title{
+			padding: 0 10%;
+		}
+		img{
+			max-width: 100%;
+		}
+		.mktoImg{
+			line-height: 0;
+		}
+		.title{
+			min-height: 90px;
+			padding-top: 18px;
+		}
+		header{
+			color: #fff;
+			background: -moz-linear-gradient(top,  rgba(68,68,68,.5) 0%, rgba(33,33,33,0.5) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(197,0,26,0.5)), color-stop(100%,rgba(33,33,33,0.5))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(68,68,68,.5) 0%,rgba(33,33,33,0.5) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(68,68,68,.5) 0%,rgba(33,33,33,0.5) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(68,68,68,.5) 0%,rgba(33,33,33,0.5) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(68,68,68,.5) 0%,rgba(33,33,33,0.5) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80c5001a', endColorstr='#80212121',GradientType=0 ); /* IE6-9 */
+			padding-top: 18px;
+			padding-bottom: 18px;
+			position: relative;
+			min-height: 466px;
+		}
+		header:after{
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			background: url(http://resources.synthesio.com/rs/297-CXJ-795/images/forrester-bg-low-res.jpg) no-repeat left top;
+			z-index: -1;
+			width: 100%;
+			height: 100%;
+		}
+		header:before{
+			background: none;
+			z-index: 2;
+			width: 100%;
+			height: 100%;
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+		header:before, header:after{
+			pointer-events: none;
+		}
+		.logo{
+			float: left;
+		}
+		.main{
+			padding-bottom: 18px;
+		}
+		.form{
+			width: 38%;
+			background: rgba(197, 0, 26, 1);
+			float: right;
+			min-height: 200px;
+			padding-top: 18px;
+			position: relative;
+			margin-top: 55px;
+			display: none;
+		}
+		.form:before{
+			content: '';
+			width: 0; 
+			height: 0; 
+			border-left: 30px solid #fff;
+			border-bottom: 30px solid transparent;
+			border-top: 30px solid transparent;
+			position: absolute;
+			bottom: 23px;
+		}
+		.form h3{
+			color: #fff;
+		}
+		.mktoForm{
+			margin: 0 auto;
+		}
+		.heading3{
+			padding-top: 18px;
+		}
+		.supporting{
+			width: 55%;
+			margin-right: 7%;
+		}
+		.supporting ul{
+			list-style: circle;
+			padding-left: 40px;
+			margin-bottom: 18px;
+		}
+		.about, .clients{
+			float: left;
+			width: 48%;
+		}
+		.about{
+			margin-right: 4%;
+		}
+		.about h3, .clients h3{
+			border-bottom: 3px solid rgba(197, 0, 26, 1);
+			line-height: 54px
+		}
+		.clients .mktoImg{
+			display: inline-block;
+			width: 32%;
+			margin-bottom: 10px;
+			text-align: center;
+			margin-right: 1%;
+		}
+		.clients .mktoImg:nth-of-type(3n+3){
+			margin-right: 0;
+		}
+		footer{
+			background-color: #444;
+			color: #fff;
+			text-align: center;
+			min-height: 126px;
+		}
+		footer small{
+			height: 100%;
+			display: inline-block;
+			line-height: 126px;
+		}
+		form{
+			padding-left: 10px;
+			padding-bottom: 36px;
+		}
+		.icons{
+			border: none;
+			margin: 18px 0;
+		}
+		.icon{
+			padding-bottom: 18px;
+			float: left;
+			width: 20%;
+		}
+		.icon aside div{
+			width: 100px;
+			height: 100px;
+			border-radius: 50%;
+			position: relative;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.icon figcaption{
+			text-align: center;
+			padding: 18px 10px 0;
+		}
+		.icon img{
+			display: block;
+			margin: auto;
+			width: 28px;
+			height: 28px;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			position: absolute;
+		}
+		.icon h4{
+			color: rgba(197, 0, 26, 1);
+			font-weight: bold;
+			margin-bottom: 18px;
+		}
+		.listen{
+			background: #9aca39;
+		}
+		.analyze{
+			background: #fda728;
+		}
+		.collaborate{
+			background: #2bc5e8;
+		}
+		.connect{
+			background: #c5001a;
+		}
+		.measure{
+			background: #8012d4;
+		}
+		hr{
+			clear: both;
+			border: none;
+		}
+		/* Toggle Sections */
+		.heading1{
+			display: ${heading1Toggle};
+		}
+		.heading2{
+			display: ${heading2Toggle};
+		}
+		.heading3{
+			display: ${heading3Toggle};
+			margin-right: 571px;
+		}
+		.heading4{
+			display: ${heading4Toggle};
+		}
+		.wave{
+			background: rgba(255, 255, 255, .7);
+			border-radius: 5px;
+			box-shadow: 0 0 5px 2px rgba(0, 0, 0, .4);
+			position: absolute;
+			right: 9%;
+			top: -41px;
+		}
+		.lbActive{
+			color: #fff;
+			background: rgba(154, 202, 57, 1);
+			border-radius: 2px;
+			font-size: 36px;
+			padding: 20px 25px;
+			margin-top: 36px;
+			z-index: 999;
+			border: 1px solid transparent;
+			outline: none;
+		}
+		.lbActive:hover{
+			border-color: #fff;
+			color: rgba(154, 202, 57, 1);
+			background-color: #fff;
+		}
+		.mktoModalContent:before{
+			content: 'Download The Report';
+			display: block;
+			margin-bottom: 18px;
+			font-weight: bold;
+			font-size: 18px;
+		}
+		/* Media Queries */
+		@media screen and (min-width: 960px){
+			.speakers:last-of-type{
+				margin-right: 0;
+			}
+		}
+		@media screen and (max-width: 1280px){
+			header, .main, footer, .title{
+				padding-left: 10%;
+				padding-right: 10%;
+			}
+			header:before{
+				background-position: -70px 50%, 130% 130px;
+			}
+			.wave{
+				right: 20px;
+				width: 400px;
+				top: 180px;
+				background-color: rgba(255, 255, 255, 1);
+			}
+			.lbActive{
+				font-size: 24px;
+			}
+			h1, h2{
+				margin-right: 0;
+			}
+			.heading3{
+				margin-right: 410px;
+			}
+		}
+		@media screen and (max-width: 960px){
+			header, .main, footer, .title{
+				padding-left: 5%;
+				padding-right: 5%;
+			}
+		}
+		@media screen and (max-width: 760px){
+			h1{
+				font-size: 30px;
+				line-height: 36px;
+			}
+			h2{
+				font-size: 18px;
+				line-height: 18px;
+			}
+			.form, .supporting, .about, .clients, .icons{
+				float: none;
+				width: 100%;
+			}
+			.form{
+				margin-top: 0;
+			}
+			.form:before{
+				border: none;
+			}
+			.supporting{
+				margin-bottom: 18px;
+			}
+			.about{
+				background-position: 50% 50%;
+			}
+			.about h3, .clients h3{
+				margin-top: 18px;
+			}
+          	.mktoButtonWrap{
+				margin-left: 0 !important;
+			}
+			.speakers .mktoText{
+				width: 95%;
+			}
+			header:before{
+				background: none;
+			}
+			.mktoModal .mktoModalContent{
+				width: 90% !important;
+			}
+			.wave{
+				position: static;
+				display: block;
+				box-shadow: none;
+				margin: 18px auto 0;
+			}
+			.lbActive{
+				font-size: 18px;
+				padding: 10px 15px;
+				margin-top: 18px;
+			}
+			header{
+				text-align: center;
+			}
+			.icon{
+				float: none;
+				width: 100%;
+			}
+			.heading3{
+				margin-right: 0;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="title">
+		<img src="http://resources.synthesio.com/rs/synthesio/images/Synthesio-Logo-RGB-150x50.jpg" alt="Synthesio">
+	</div>
+	<header id="mktHeader">
+		<h1 class="heading1">${heading1}</h1>
+		<h2 class="heading2">${heading2}</h2>
+		<button class="lbActive">Download The Report</button>
+		<script src="//app-sjh.marketo.com/js/forms2/js/forms2.min.js"></script>
+		<form id="mktoForm_1497"></form>
+		<script>
+			document.querySelector('.lbActive').addEventListener('click', function(){
+				MktoForms2.loadForm("//app-sjh.marketo.com", "297-CXJ-795", 1497, function (form){
+					MktoForms2.lightbox(form).show();
+				});
+			}, false);
+		</script>
+		<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/forrester-wave-medium.png" class="wave">
+	</header>
+	<section class="main group" role="main">
+		<h3 class="heading3">${heading3}</h3>
+		<article class="supporting  mktoText" id="body" mktoName="Main Body">
+			<ul>
+				<li>Supporting bullets go here.</li>
+				<li>Supporting bullets go here.</li>
+				<li>Supporting bullets go here.</li>
+				<li>Supporting bullets go here.</li>
+				<li>Supporting bullets go here.</li>
+			</ul>
+			<p>In this webinar, we will help you understand how Synthesio is working to provide marketers the proof they are looking for to validate their social media work, by using IMPACT, Synthesio’s new Social ROI metrics.</p>
+           	<p>Join our webinar to learn how to incorporate executive-level social metrics that will finally answer the key questions around ROI:</p>
+		</article>
+		<section class="icons group">
+			<figure class="icon">
+				<aside>
+					<div class="listen">
+						<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/ico-listen.png">
+					</div>
+				</aside>
+				<figcaption>
+					<h4>${bubble1}</h4>
+					<div class="mktoText" id="listen" mktoName="Listen Section">
+						<p>In this webinar, we will help you understand how Synthesio is working to provide marketers the proof they are looking for to validate their social media work, by using IMPACT, Synthesio’s new Social ROI metrics.</p>
+					</div>
+				</figcaption>
+			</figure>
+			<figure class="icon">
+				<aside>
+					<div class="analyze">
+						<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/ico-analize.png">
+					</div>
+				</aside>
+				<figcaption>
+					<h4>${bubble2}</h4>
+					<div class="mktoText" id="analyze" mktoName="Analyze Section">
+						<p>In this webinar, we will help you understand how Synthesio is working to provide marketers the proof they are looking for to validate their social media work, by using IMPACT, Synthesio’s new Social ROI metrics.</p>
+					</div>
+				</figcaption>
+			</figure>
+			<figure class="icon">
+				<aside>
+					<div class="collaborate">
+						<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/ico-collaborate.png">
+					</div>
+				</aside>
+				<figcaption>
+					<h4>${bubble3}</h4>
+					<div class="mktoText" id="collaborate" mktoName="Collaborate Section">
+						<p>In this webinar, we will help you understand how Synthesio is working to provide marketers the proof they are looking for to validate their social media work, by using IMPACT, Synthesio’s new Social ROI metrics.</p>
+					</div>
+				</figcaption>
+			</figure>
+			<figure class="icon">
+				<aside>
+					<div class="connect">
+						<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/ico-connect.png">
+					</div>
+				</aside>
+				<figcaption>
+					<h4>${bubble4}</h4>
+					<div class="mktoText" id="connect" mktoName="Connect Section">
+						<p>In this webinar, we will help you understand how Synthesio is working to provide marketers the proof they are looking for to validate their social media work, by using IMPACT, Synthesio’s new Social ROI metrics.</p>
+					</div>
+				</figcaption>
+			</figure>
+			<figure class="icon">
+				<aside>
+					<div class="measure">
+						<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/ico-measure.png">
+					</div>
+				</aside>
+				<figcaption>
+					<h4>${bubble5}</h4>
+					<div class="mktoText" id="measure" mktoName="Measure Section">
+						<p>In this webinar, we will help you understand how Synthesio is working to provide marketers the proof they are looking for to validate their social media work, by using IMPACT, Synthesio’s new Social ROI metrics.</p>
+					</div>
+				</figcaption>
+			</figure>
+		</section>
+		<hr>
+		<section class="about mktoText" id="about" mktoName="About Synthesio">
+			<h3>About Synthesio</h3>
+			<p>We help brands and agencies find valuable social insights to drive real business value. Focus on the conversations that matter most to your business, track and measure your online reputation, collaborate and engage in real time, and manage consumer relationships in Social Media in one single, easy-to-use platform.</p>
+			<p>We help brands and agencies find valuable social insights to drive real business value. Focus on the conversations that matter most to your business, track and measure your online reputation, collaborate and engage in real time, and manage consumer relationships in Social Media in one single, easy-to-use platform.</p>
+			<p>We help brands and agencies find valuable social insights to drive real business value. Focus on the conversations that matter most to your business, track and measure your online reputation, collaborate and engage in real time, and manage consumer relationships in Social Media in one single, easy-to-use platform.</p>
+		</section>
+		<section class="clients group">
+			<h3>Our Clients</h3>
+			<div class="mktoImg" id="client1" mktoName="Client 1 Image">
+				<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/toyota.png" alt="Toyota">
+			</div><!-- //inline-block hack
+			--><div class="mktoImg" id="client2" mktoName="Client 2 Image">
+				<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/peugeot.png" alt="Peugeot">
+			</div><!-- //inline-block hack
+			--><div class="mktoImg" id="client3" mktoName="Client 3 Image">
+				<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/t-mobile.png" alt="T-Mobile">
+			</div><!-- //inline-block hack
+			--><div class="mktoImg" id="client4" mktoName="Client 4 Image">
+				<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/ubisoft.png" alt="Ubisoft">
+			</div><!-- //inline-block hack
+			--><div class="mktoImg" id="client5" mktoName="Client 5 Image">
+				<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/mcdonalds.png" alt="McDonalds">
+			</div><!-- //inline-block hack
+			--><div class="mktoImg" id="client6" mktoName="Client 6 Image">
+				<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/microsoft.png" alt="Microsoft">
+			</div><!-- //inline-block hack
+			--><div class="mktoImg" id="client7" mktoName="Client 7 Image">
+				<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/vodafone.png" alt="Vodafone">
+			</div><!-- //inline-block hack
+			--><div class="mktoImg" id="client8" mktoName="Client 8 Image">
+				<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/loreal.png" alt="L'Oréal Paris">
+			</div><!-- //inline-block hack
+			--><div class="mktoImg" id="client9" mktoName="Client 9 Image">
+				<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/virgin-atlantic.png" alt="Virgin Atlantic">
+			</div>
+		</section>
+	</section>
+	<footer id="mktFooter" class="mktoText" mktoName="Footer">
+		<small>&copy;2015 Synthesio. All rights reserved.</small>
+	</footer>
+</body>
+</html>
