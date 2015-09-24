@@ -6,8 +6,8 @@
 	<meta class="mktoString" id="title" mktoName="Title" default="Synthesio">
 	<meta class="mktoString" id="heading1" mktoName="Heading" default="I'm The Page Heading!">
 	<meta class="mktoString" id="heading2" mktoName="Subheading" default="I'm The Page Subeading!">
-	<meta class="mktoString" id="heading3" mktoName="Pitch Heading" default="I'm the Pitch!">
-	<meta class="mktoString" id="heading4" mktoName="Form Heading" default="Download Now">
+	<meta class="mktoString" id="heading3" mktoName="Pitch Heading" default="Thank you for downloading the case study!">
+	<meta class="mktoString" id="heading4" mktoName="Form Heading" default="Share!">
 
 
 	<!-- Booleans -->
@@ -217,6 +217,24 @@
 			display: inline-block;
 			line-height: 126px;
 		}
+		.mktoShareButton{
+			display: block;
+			margin: 36px auto;
+			text-align: center;
+		}
+		#shareButton .cf_widget .cf_button_du_jour{
+			font-size: 18px;
+			padding: 10px 20px;
+			border: none;
+			background-image: none;
+			background-color: rgba(154, 202,  57, 1);
+			border: 1px solid #fff;
+		}
+		#shareButton .cf_widget .cf_button_du_jour:hover{
+			border: 1px solid #1e85c4;
+			color: rgba(154, 202,  57, 1);
+			background-color: #fff;
+		}
 		/* Media Queries */
 		@media screen and (max-width: 1280px){
 			header, .main, .supporting, footer, .about, .clients{
@@ -256,9 +274,7 @@
 	<section class="main" role="main">
 		<h1 class="heading1">${heading1}</h1>
 		<h2 class="heading2">${heading2}</h2>
-		<div class="mktoImg" id="bannerImage" mktoName="Banenr Image">
-			<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/case-studies-graphic.png" alt="Synthesio Case Studies" class="graphic">
-		</div>
+		<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/case-studies-graphic.png" alt="Synthesio Case Studies" class="graphic">
 	</section>
 	<section class="supporting" id="pitch">
 		<h3 class="heading3">${heading3}</h3>
@@ -267,13 +283,13 @@
 			<p>Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
 			<p>Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
 		</div>
-		<aside class="form group">
-			<h3><span class="lCover">${heading4}</span></h3>
-			<div class="mktoForm" id="form" mktoName="Signup Form">
-				
-			</div>
-		</aside>
 	</section>
+	<aside class="form group">
+		<h3><span class="lCover">${heading4}</span></h3>
+		<div class="share">
+			<div class="mktoShareButton" id="shareButton" mktoName="Share"></div>
+		</div>
+	</aside>
 	<section class="supporting group" id="supporting">
 		<div class="subsection  mktoText" id="sub1" mktoName="Supporting 1">
 			<ul>
@@ -296,49 +312,6 @@
 				<li>As long as it stays within the page branding.</li>
 				<li>Supporting bullets go here.</li>
 			</ul>
-		</div>
-	</section>
-	<section class="about mktoText" id="about" mktoName="About Synthesio">
-		<h3>About Synthesio</h3>
-		<p>Synthesio, named the leader in a 2014 report looking at global Social Intelligence platforms. Used by some of the world's top brands, and the agencies that support them, Synthesio is the framework for building social intelligence that provides real business results. Whether an organization's social team is built within Marketing or crosses multiple departments, business units or geographies, Synthesio helps teams listen to, and analyze, consumer conversations across social and mainstream media within one platform. Founded in 2006, Synthesio has offices in New York, Paris, London, and Singapore.</p>
-	</section>
-	<section class="clients group">
-		<h3>Our Clients</h3>
-		<div class="mktoImg" id="client1" mktoName="Client 1 Image">
-			<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/capital-one.png" alt="Capital One">
-		</div><!-- //inline-block hack
-		--><div class="mktoImg" id="client2" mktoName="Client 2 Image">
-			<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/peugeot.png" alt="Peugeot">
-		</div><!-- //inline-block hack
-		--><div class="mktoImg" id="client3" mktoName="Client 3 Image">
-			<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/ford.png" alt="Ford">
-		</div><!-- //inline-block hack
-		--><div class="mktoImg" id="client4" mktoName="Client 4 Image">
-			<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/nissan.png" alt="Nissan">
-		</div><!-- //inline-block hack
-		--><div class="mktoImg" id="client8" mktoName="Client 8 Image">
-			<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/virgin-atlantic.png" alt="Virgin Atlantic">
-		</div><!-- //inline-block hack
-		--><div class="mktoImg" id="client5" mktoName="Client 5 Image">
-			<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/master-card.png" alt="MasterCard">
-		</div><!-- //inline-block hack
-		--><div class="mktoImg" id="client6" mktoName="Client 6 Image">
-			<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/american-express.png" alt="American Express">
-		</div><!-- //inline-block hack
-		--><div class="mktoImg" id="client7" mktoName="Client 7 Image">
-			<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/lg.png" alt="LG">
-		</div><!-- //inline-block hack
-		--><div class="mktoImg" id="client9" mktoName="Client 9 Image">
-			<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/google.png" alt="Google">
-		</div><!-- //inline-block hack
-		--><div class="mktoImg" id="client11" mktoName="Client 11 Image">
-			<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/loreal.png" alt="L'Oreal">
-		</div><!-- //inline-block hack
-		--><div class="mktoImg" id="client10" mktoName="Client 10 Image">
-			<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/ing.png" alt="ING">
-		</div><!-- //inline-block hack
-		--><div class="mktoImg" id="client12" mktoName="Client 12 Image">
-			<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/toyota.png" alt="Toyota">
 		</div>
 	</section>
 	<footer id="mktFooter" class="mktoText" mktoName="Footer">

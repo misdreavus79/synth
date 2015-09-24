@@ -20,6 +20,8 @@
 	<meta class="mktoBoolean" id="heading2Toggle" mktoName="Subeading" default="true" true_value="block" false_value="none">
 	<meta class="mktoBoolean" id="heading3Toggle" mktoName="Main Body Title" default="true" true_value="block" false_value="none">
 	<meta class="mktoBoolean" id="heading4Toggle" mktoName="Speakers Title" default="true" true_value="block" false_value="none">
+	<meta class="mktoBoolean" id="iconsToggle" mktoName="Circles Area" default="true" true_value="block" false_value="none">
+
 
 
 	<title>${title}</title>
@@ -49,7 +51,7 @@
 			font-family: 'Helvetica Neue', Helvetica, sans-serif;
 		}
 		h1{
-			font-size: 54px;
+			font-size: 45px;
 			line-height: 54px;
 			margin-bottom: 18px;
 			margin-top: 36px;
@@ -168,8 +170,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80c5001a', e
 			padding-top: 18px;
 		}
 		.supporting{
-			width: 55%;
-			margin-right: 7%;
+			font-size: 18px;
+			margin-top: 72px;
 		}
 		.supporting ul{
 			list-style: circle;
@@ -282,6 +284,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80c5001a', e
 		.heading4{
 			display: ${heading4Toggle};
 		}
+		.icons{
+			display: ${iconsToggle};
+		}
 		.wave{
 			background: rgba(255, 255, 255, .7);
 			border-radius: 5px;
@@ -339,14 +344,28 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80c5001a', e
 			h1, h2{
 				margin-right: 0;
 			}
+			h1{
+				margin-top: 0;
+			}
 			.heading3{
 				margin-right: 410px;
+			}
+			.supporting{
+				margin-top: 126px;
 			}
 		}
 		@media screen and (max-width: 960px){
 			header, .main, footer, .title{
 				padding-left: 5%;
 				padding-right: 5%;
+			}
+			.supporting{
+				width: 100%;
+				margin-top: 126px;
+			}
+			h1{
+				font-size: 36px;
+				line-height: 36px;
 			}
 		}
 		@media screen and (max-width: 760px){
@@ -424,9 +443,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80c5001a', e
 		<script src="//app-sjh.marketo.com/js/forms2/js/forms2.min.js"></script>
 		<form id="mktoForm_1497"></form>
 		<script>
+			var date = new Date();
+			date = date.getTime();
+			var uniqueId = 'MID-' + Math.floor(Math.random() * 1000) + 1 + '-' + date;
+			document.cookie = 'marinId=' + uniqueId;
 			document.querySelector('.lbActive').addEventListener('click', function(){
 				MktoForms2.loadForm("//app-sjh.marketo.com", "297-CXJ-795", 1497, function (form){
-					MktoForms2.lightbox(form).show();
+					form.vals({ "marinuniqueid": uniqueId });
+				    MktoForms2.lightbox(form).show();
 				});
 			}, false);
 		</script>
@@ -522,31 +546,31 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80c5001a', e
 		<section class="clients group">
 			<h3>Our Clients</h3>
 			<div class="mktoImg" id="client1" mktoName="Client 1 Image">
-				<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/toyota.png" alt="Toyota">
+				<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/capital-one.png" alt="Capital One">
 			</div><!-- //inline-block hack
 			--><div class="mktoImg" id="client2" mktoName="Client 2 Image">
 				<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/peugeot.png" alt="Peugeot">
 			</div><!-- //inline-block hack
 			--><div class="mktoImg" id="client3" mktoName="Client 3 Image">
-				<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/t-mobile.png" alt="T-Mobile">
+				<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/ford.png" alt="Ford">
 			</div><!-- //inline-block hack
 			--><div class="mktoImg" id="client4" mktoName="Client 4 Image">
-				<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/ubisoft.png" alt="Ubisoft">
+				<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/nissan.png" alt="Nissan">
 			</div><!-- //inline-block hack
 			--><div class="mktoImg" id="client5" mktoName="Client 5 Image">
-				<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/mcdonalds.png" alt="McDonalds">
+				<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/master-card.png" alt="MasterCard">
 			</div><!-- //inline-block hack
 			--><div class="mktoImg" id="client6" mktoName="Client 6 Image">
-				<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/microsoft.png" alt="Microsoft">
+				<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/toyota.png" alt="Toyota">
 			</div><!-- //inline-block hack
 			--><div class="mktoImg" id="client7" mktoName="Client 7 Image">
-				<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/vodafone.png" alt="Vodafone">
+				<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/lg.png" alt="LG">
 			</div><!-- //inline-block hack
 			--><div class="mktoImg" id="client8" mktoName="Client 8 Image">
-				<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/loreal.png" alt="L'Oréal Paris">
+				<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/virgin-atlantic.png" alt="Virgin Atlantic">
 			</div><!-- //inline-block hack
 			--><div class="mktoImg" id="client9" mktoName="Client 9 Image">
-				<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/virgin-atlantic.png" alt="Virgin Atlantic">
+				<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/google.png" alt="Google">
 			</div>
 		</section>
 	</section>
