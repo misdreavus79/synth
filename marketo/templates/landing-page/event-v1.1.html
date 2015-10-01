@@ -7,7 +7,8 @@
 	<meta class="mktoString" id="heading2" mktoName="Subheading" default="I'm The Page Subeading!">
 	<meta class="mktoString" id="heading3" mktoName="Sidebar Title" default="Save The Date!">
 	<meta class="mktoString" id="heading4" mktoName="Featured Guests" default="Featured Guests">
-	<meta class="mktoString" id="heading5" mktoName="Featured Guests" default="Join Synthesio in NYC to pair your Social ROI with a fine wine">
+	<meta class="mktoString" id="heading5" mktoName="Body Title" default="Join Synthesio in NYC to pair your Social ROI with a fine wine">
+	<meta class="mktoString" id="heading6" mktoName="Form Heading" default="Reserve your spot today!">
 	<meta class="mktoString" id="speaker1Name" mktoName="Speaker 1 Name" default="Speaker Name">
 	<meta class="mktoString" id="speaker1Company" mktoName="Speaker 1 Company" default="Speaker Company">
 	<meta class="mktoString" id="speaker1Title" mktoName="Speaker 1 Title" default="Speaker Title">
@@ -19,12 +20,16 @@
 	<meta class="mktoString" id="speaker3Title" mktoName="Speaker 3 Title" default="Speaker Title">
 	<meta class="mktoString" id="month" mktoName="Month" default="December">
 	<meta class="mktoString" id="date" mktoName="Date" default="26">
+	<meta class="mktoString" id="aboutTitle" mktoName="About Synthesio" default="About Synthesio">
+	<meta class="mktoString" id="clients" mktoName="Our Clients" default="Our Clients">
 
 
 	<!-- Booleans -->
 	<meta class="mktoBoolean" id="speaker1Toggle" mktoName="Speaker 1" default="true" true_value="block" false_value="none">
 	<meta class="mktoBoolean" id="speaker2Toggle" mktoName="Speaker 2" default="true" true_value="block" false_value="none">
 	<meta class="mktoBoolean" id="speaker3Toggle" mktoName="Speaker 3" default="true" true_value="block" false_value="none">
+	<meta class="mktoBoolean" id="heading1Toggle" mktoName="Heading 1" default="true" true_value="block" false_value="none">
+	<meta class="mktoBoolean" id="heading2Toggle" mktoName="Heading 2" default="true" true_value="block" false_value="none">
 
 	<meta charset="utf-8">
 	<title>${title}</title>
@@ -135,7 +140,7 @@
 		}
 		.title{
 			text-transform: uppercase;
-			background: rgba(33, 33, 33, 1) url('http://resources.synthesio.com/rs/297-CXJ-795/images/pattern-event.png') repeat-x left top;
+			background: rgba(33, 33, 33, 1) url('http://resources.synthesio.com/rs/297-CXJ-795/images/pattern-event.png') left top;
 			color: rgba(255, 255, 255, 1);
 			padding-top: 18px;
 			padding-bottom: 18px;
@@ -217,6 +222,13 @@
 		}
 		.speaker3{
 			display: ${speaker3Toggle};
+		}
+		.heading1{
+			display: ${heading1Toggle};
+			margin-top: 54px;
+		}
+		.heading2{
+			display: ${heading2Toggle};
 		}
 
 		@media screen and (max-width: 960px){
@@ -394,8 +406,6 @@
 	</header>
 	<section class="content" role="main">
 		<div class="title">
-			<h1 class="heading1">${heading1}</h1>
-			<h2 class="heading2">${heading2}</h2>
 			<nav class="social">
 				<a href="https://twitter.com/synthesio" target="New_Window">
 					<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/tw-wht-58x48.png">
@@ -407,10 +417,12 @@
 					<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/ln-wht-58x58.png">
 				</a>
 			</nav>
+			<h1 class="heading1">${heading1}</h1>
+			<h2 class="heading2">${heading2}</h2>
 		</div>
 		<section class="main group" role="main">
 			<aside class="form">
-				<h3>Reserve your spot today!</h3>
+				<h3>${heading6}</h3>
 				<div class="mktoForm" id="form" mktoName="Signup Form">
 					
 				</div>
@@ -428,13 +440,13 @@
 			</div>
 			<hr>
 			<div class="about mktoText" id="about" mktoName="About Synthesio">
-				<h3>About Synthesio</h3>
+				<h3>${aboutTitle}</h3>
 				<p>We help brands and agencies find valuable social insights to drive real business value. Focus on the conversations that matter most to your business, track and measure your online reputation, collaborate and engage in real time, and manage consumer relationships in Social Media in one single, easy-to-use platform.</p>
 				<p>We help brands and agencies find valuable social insights to drive real business value. Focus on the conversations that matter most to your business, track and measure your online reputation, collaborate and engage in real time, and manage consumer relationships in Social Media in one single, easy-to-use platform.</p>
 				<p>We help brands and agencies find valuable social insights to drive real business value. Focus on the conversations that matter most to your business, track and measure your online reputation, collaborate and engage in real time, and manage consumer relationships in Social Media in one single, easy-to-use platform.</p>
 			</div>
 			<div class="clients group">
-				<h3>Our Clients</h3>
+				<h3>${clients}</h3>
 				<div class="mktoImg" id="client1" mktoName="Client 1 Image">
 					<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/capital-one.png" alt="Capital One">
 				</div><!-- //inline-block hack
