@@ -5,3 +5,4 @@ assets/*.eps
 assets/.DS_Store
 node_modules
 assets/social-media-logos
+npm-debug.log

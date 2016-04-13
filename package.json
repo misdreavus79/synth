@@ -4,7 +4,8 @@
   "description": "Synthesio Work",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "grunt": "grunt"
   },
   "repository": {
     "type": "git",
