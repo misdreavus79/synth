@@ -1,33 +1,14 @@
+<?php
+	$fields = get_field(get_the_ID());
+?>
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>${title}</title>
+	<title><?= the_title()?> - Change University</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="http://resources.synthesio.com/rs/synthesio/images/reset.css" media="screen">
 	<style>
-		/* --- Boolean Toggles --- */
-		.heading1{
-			display: ${heading1Toggle};
-		}
-		.heading2{
-			display: ${heading2Toggle};
-		}
-		.heading3{
-			display: ${heading3Toggle};
-		}
-		.heading4{
-			display: ${heading4Toggle};
-		}
-		#description{
-			display: ${descriptionToggle};
-		}
-		#pitch{
-			display: ${pitchToggle};
-		}
-		#supporting{
-			display: ${supportingToggle};
-		}
 		body{
 			font-family: 'Helvetica Neue', Helvetica, sans-serif;
 		}
@@ -48,7 +29,7 @@
 			text-transform: uppercase;
 		}
 		.form h3{
-			color: #c5001a;
+			color: #3965af;
 			text-align: center;
 			font-size: 21px;
 			line-height: 36px;
@@ -66,7 +47,7 @@
 		}
 		.main, .about{
 			color: #fff;
-			background: #c5001a;
+			background: #3965af;
 			box-shadow: 0px 0px 1px rgba(0, 0, 0, .6);
 			padding-top: 18px;
 			padding-bottom: 18px;
@@ -88,14 +69,6 @@
 			padding-top: 18px;
 			background: #fff;
 			border-radius: 5px;
-			/*width: 320px;
-			padding-top: 18px;
-			background: #fff;
-			border-radius: 5px;
-			position: absolute;
-			right: 20%;
-			bottom: -30%;
-			box-shadow: 0 0 2px 2px#c5001a;*/
 		}
 		label[for="Email_Opt_In__c"] {
 		  width: 200px !important;
@@ -104,15 +77,15 @@
 			margin: 0 auto;
 		}
 		button[type="submit"]{
-			background-color: #c5001a;
+			background-color: #3965af;
 			color: #fff;
 			border: 1px solid #fff;
 			transition: all .3s ease;
 		}
 		button[type="submit"]:hover, button[type="submit"]:focus{
 			background-color: #fff;
-			border-color: #c5001a;
-			color: #c5001a;
+			border-color: #3965af;
+			color: #3965af;
 		}
 		.supporting{
 			padding: 18px 20%;
@@ -199,8 +172,8 @@
 		<img src="http://resources.synthesio.com/rs/synthesio/images/Synthesio-Logo-RGB-150x50.jpg" alt="Synthesio">
 	</header>
 	<section class="main group" role="main">
-		<h1 class="heading1">${heading1}</h1>
-		<h2 class="heading2">${heading2}</h2>
+		<h1 class="heading1"><?= the_title() ?></h1>
+		<h2 class="heading2"><?= $fields['subheading']</h2>
 		<div class="mktoContent">
 			<div class="mktoImg" id="introImg" mktoName="Intro Image"></div>
 			<div class="mktoText" id="description" mktoName="Intro Text">
