@@ -1,279 +1,277 @@
 <?php
-	$fields = get_field(get_the_ID());
+  $fields = get_fields(get_the_ID());
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title><?= the_title()?> - Change University</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="http://resources.synthesio.com/rs/synthesio/images/reset.css" media="screen">
-	<style>
-		body{
-			font-family: 'Helvetica Neue', Helvetica, sans-serif;
-		}
-		h1{
-			font-size: 54px;
-			line-height: 54px;
-			margin-bottom: 18px;
-			text-transform: uppercase;
-			text-align: center;
-		}
-		h2{
-			text-align: center;
-		}
-		h2, h3{
-			font-size: 24px;
-			line-height: 36px;
-			margin-bottom: 18px;
-			text-transform: uppercase;
-		}
-		.form h3{
-			color: #3965af;
-			text-align: center;
-			font-size: 21px;
-			line-height: 36px;
-		}
-		p{
-			font-size: 16px;
-			line-height: 18px;
-			margin-bottom: 18px;
-		}
-		header, .main, footer, .about, .clients{
-			padding: 0 20%;
-		}
-		header{
-			height: 54px;
-		}
-		.main, .about{
-			color: #fff;
-			background: #3965af;
-			box-shadow: 0px 0px 1px rgba(0, 0, 0, .6);
-			padding-top: 18px;
-			padding-bottom: 18px;
-		}
-		.mktoContent, .form{
-			float: left;
-		}
-		.mktoContent{
-			width: 70%;
-			padding-right: 2%;
-		}
-		.mktoContent .mktoImg{
-			text-align: center;
-			margin-bottom: 36px;
-			margin-top: 36px;
-		}
-		.form{
-			width: 28%;
-			padding-top: 18px;
-			background: #fff;
-			border-radius: 5px;
-		}
-		label[for="Email_Opt_In__c"] {
-		  width: 200px !important;
-		}
-		.mktoForm{
-			margin: 0 auto;
-		}
-		button[type="submit"]{
-			background-color: #3965af;
-			color: #fff;
-			border: 1px solid #fff;
-			transition: all .3s ease;
-		}
-		button[type="submit"]:hover, button[type="submit"]:focus{
-			background-color: #fff;
-			border-color: #3965af;
-			color: #3965af;
-		}
-		.supporting{
-			padding: 18px 20%;
-		}
-		.supporting ul{
-			list-style: circle;
-			padding-left: 20px;
-		}
-		.subsection{
-			float: left;
-			width: 31%;
-			margin-right: 2%;
-		}
-		.subsection:last-child{
-			margin-right: 0;
-		}
-		.subsection:last-child{
-			margin-right: 0;
-		}
-		.about, .clients{
-			margin-top: 36px;
-		}
-		.about{
-			background-image: url(http://resources.synthesio.com/rs/297-CXJ-795/images/synthesio-mark.png);
-			background-position: left 50%;
-			background-repeat: no-repeat;
-		}
-		.clients .mktoImg{
-			display: inline-block;
-			width: 25%;
-			margin-bottom: 10px;
-			text-align: center;
-		}
-		footer{
-			background-color: #444;
-			color: #fff;
-			text-align: center;
-			min-height: 126px;
-		}
-		footer small{
-			height: 100%;
-			display: inline-block;
-			line-height: 126px;
-		}
-		/* Media Queries */
-		@media screen and (max-width: 1280px){
-			header, .main, .supporting, footer, .about, .clients{
-				padding-left: 10%;
-				padding-right: 10%;
-			}
-			.mktoContent{
-				width: 70%
-			}
-			.form{
-				width: 28%;
-			}
-		}
-		@media screen and (max-width: 960px){
-			header, .main, .supporting, footer, .about, .clients{
-				padding-left: 5%;
-				padding-right: 5%;
-			}
-			.mktoContent{
-				width: 69%;
-				margin-right: 3%;
-			}
-		}
-		@media screen and (max-width: 760px){
-			.mktoContent, .form, .subsection{
-				float: none;
-				width: 100%;
-			}
-			.form{
-				margin-top: 0;
-			}
-			.subsection{
-				margin-bottom: 18px;
-			}
-		}
-	</style>
+  <meta charset="utf-8">
+  <title><?= the_title()?> - Change University</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="http://resources.synthesio.com/rs/synthesio/images/reset.css" media="screen">
+  <style>
+    body{
+      font-family: 'Helvetica Neue', Helvetica, sans-serif;
+      /*-webkit-text-stroke-width: .4px;*/
+      -webkit-font-smoothing:antialiased;
+      font-smoothing: antialiased;
+    }
+    /*.mainPitch, .clients{
+      -webkit-text-stroke-color: #000;
+    }
+    .main, .about{
+      -webkit-text-stroke-color: #fff;
+    }*/
+    h1{
+      font-size: 54px;
+      line-height: 54px;
+      margin-bottom: 18px;
+      text-align: center;
+    }
+    h2{
+      text-align: center;
+    }
+    h2, h3{
+      font-size: 24px;
+      line-height: 36px;
+      margin-bottom: 18px;
+    }
+    .form h3{
+      color: #3965af;
+      text-align: center;
+      font-size: 21px;
+      line-height: 36px;
+    }
+    .mainPitch h3{
+      color: #ff7209;
+      text-align: center;
+    }
+    h1, h2, h3, h4, h5, h6{
+      text-transform: uppercase;
+    }
+    p{
+      font-size: 16px;
+      line-height: 18px;
+      margin-bottom: 18px;
+    }
+    header, .main, footer, .about, .clients{
+      padding: 0 20%;
+    }
+    .lpHeader img{
+      height: 70px;
+    }
+    .main, .about{
+      color: #fff;
+      background: #3965af;
+      box-shadow: 0px 0px 1px rgba(0, 0, 0, .6);
+      padding-top: 18px;
+      padding-bottom: 18px;
+    }
+    .lpContent, .form{
+      float: left;
+    }
+    .lpContent{
+      width: 70%;
+      padding-right: 2%;
+    }
+    .lpContent .lpImg{
+      text-align: center;
+      margin-bottom: 36px;
+      margin-top: 36px;
+    }
+    .form{
+      width: 28%;
+      padding-top: 18px;
+      background: #fff;
+      border-radius: 5px;
+    }
+    label[for="Email_Opt_In__c"] {
+      width: 200px !important;
+    }
+    .lpForm{
+      margin: 0 auto;
+    }
+    button[type="submit"]{
+      background-color: #3965af;
+      color: #fff;
+      border: 1px solid #fff;
+      transition: all .3s ease;
+    }
+    button[type="submit"]:hover, button[type="submit"]:focus{
+      background-color: #fff;
+      border-color: #3965af;
+      color: #3965af;
+    }
+    .supporting{
+      padding: 18px 20%;
+    }
+    .supporting ul{
+      list-style: circle;
+      padding-left: 20px;
+    }
+    .subsection{
+      float: left;
+      width: 31%;
+      margin-right: 2%;
+    }
+    .subsection:last-child{
+      margin-right: 0;
+    }
+    .subsection:last-child{
+      margin-right: 0;
+    }
+    .about, .clients{
+      margin-top: 36px;
+    }
+    .about{
+      background-image: url(http://misd.info/gear-flower-75.png);
+      background-position: 16px 50%;
+      background-repeat: no-repeat;
+    }
+    .about a:link, .about a:visited{
+      color: #fff;
+      text-decoration: none;
+      border-bottom: 1px solid #fff;
+    }
+    .about a:hover, .about a:active, .about a:focus{
+      border: none;
+    }
+    .clients .lpImg{
+      display: inline-block;
+      width: 25%;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    footer{
+      background-color: #444;
+      color: #fff;
+      text-align: center;
+      min-height: 126px;
+    }
+    footer small{
+      height: 100%;
+      display: inline-block;
+      line-height: 126px;
+    }
+    /* Media Queries */
+    @media screen and (max-width: 1280px){
+      header, .main, .supporting, footer, .about, .clients{
+        padding-left: 10%;
+        padding-right: 10%;
+      }
+      .lpContent{
+        width: 70%
+      }
+      .form{
+        width: 28%;
+      }
+    }
+    @media screen and (max-width: 960px){
+      header, .main, .supporting, footer, .about, .clients{
+        padding-left: 5%;
+        padding-right: 5%;
+      }
+      .lpContent{
+        width: 69%;
+        margin-right: 3%;
+      }
+    }
+    @media screen and (max-width: 760px){
+    	h1{
+    		font-size: 36px;
+    		line-height: 36px;
+    	}
+      .lpContent, .form, .subsection{
+        float: none;
+        width: 100%;
+      }
+      .form{
+        margin-top: 0;
+      }
+      .subsection{
+        margin-bottom: 18px;
+      }
+    }
+  </style>
 </head>
 <body>
-	<header id="mktHeader">
-		<img src="http://resources.synthesio.com/rs/synthesio/images/Synthesio-Logo-RGB-150x50.jpg" alt="Synthesio">
-	</header>
-	<section class="main group" role="main">
-		<h1 class="heading1"><?= the_title() ?></h1>
-		<h2 class="heading2"><?= $fields['subheading']</h2>
-		<div class="mktoContent">
-			<div class="mktoImg" id="introImg" mktoName="Intro Image"></div>
-			<div class="mktoText" id="description" mktoName="Intro Text">
-				<p>Provide a description here. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-			</div>
-		</div>
-		<aside class="form">
-			<h3>${heading4}</h3>
-			<div class="mktoForm" id="form" mktoName="Signup Form">
-				
-			</div>
-		</aside>
-	</section>
-	<section class="supporting" id="pitch">
-		<div class="mainPitch  mktoText" id="mainPitch" mktoName="Pitch">
-			<p>Supporting paragraphs go here.</p>
-			<p>Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-			<p>Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-		</div>
-	</section>
-	<section class="supporting group" id="supporting">
-		<div class="subsection">
-			<h3>Skills</h3>
-			<ul>
-				<li>Organizing</li>
-				<li>Strategic communications</li>
-				<li>Non-violent direct action</li>
-				<li>Lobbying</li>
-				<li>Training</li>
-				<li>Get-Out-the-Vote</li>
-				<li>Fundraising</li>
-				<li>Publishing</li>
-			</ul>
-		</div>
-		<div class="subsection">
-			<h3>Campaigns</h3>
-			<ul>
-				<li>Environmental Defense Fund</li>
-				<li>Sierra Club</li>
-				<li>Amnesty International</li>
-				<li>Center on Alcohol Marketing and Youth</li>
-				<li>American Federation of State, County and Municipal Employees </li>
-				<li>Democratic National Committee</li>
-				<li>TexasObserver</li>
-				<li>National Democratic Institute</li>
-				<li>Texans Standing Tall</li>
-			</ul>
-		</div>
-		<div class="subsection">
-			<h3>Teaching</h3>
-			<ul>
-				<li><em>Introduction to Campaigning & Organizing</em> at the Johns Hopkins Bloomberg School of Public Health</li>
-			</ul>
-		</div>
-	</section>
-	<section class="about mktoText" id="about" mktoName="About Synthesio">
-		<h3>About Change University</h3>
-		<p>Synthesio, named the leader in a 2014 report looking at global Social Intelligence platforms. Used by some of the world's top brands, and the agencies that support them, Synthesio is the framework for building social intelligence that provides real business results. Whether an organization's social team is built within Marketing or crosses multiple departments, business units or geographies, Synthesio helps teams listen to, and analyze, consumer conversations across social and mainstream media within one platform. Founded in 2006, Synthesio has offices in New York, Paris, London, and Singapore.</p>
-	</section>
-	<section class="clients group">
-		<h3>Our Clients</h3>
-		<div class="mktoImg" id="client1" mktoName="Client 1 Image">
-			<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/capital-one.png" alt="Vodafone">
-		</div><!-- //inline-block hack
-		--><div class="mktoImg" id="client2" mktoName="Client 2 Image">
-			<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/mcdonalds.png" alt="Ford">
-		</div><!-- //inline-block hack
-		--><div class="mktoImg" id="client3" mktoName="Client 3 Image">
-			<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/loreal.png" alt="L'Oréal Paris">
-		</div><!-- //inline-block hack
-		--><div class="mktoImg" id="client4" mktoName="Client 4 Image">
-			<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/ford.png" alt="McDonalds">
-		</div><!-- //inline-block hack
-		--><div class="mktoImg" id="client5" mktoName="Client 5 Image">
-			<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/microsoft.png" alt="Microsoft">
-		</div><!-- //inline-block hack
-		--><div class="mktoImg" id="client6" mktoName="Client 6 Image">
-			<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/nissan.png" alt="Nissan">
-		</div><!-- //inline-block hack
-		--><div class="mktoImg" id="client7" mktoName="Client 7 Image">
-			<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/peugeot.png" alt="Peugeot">
-		</div><!-- //inline-block hack
-		--><div class="mktoImg" id="client8" mktoName="Client 8 Image">
-			<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/sony.png" alt="Sony">
-		</div><!-- //inline-block hack
-		--><div class="mktoImg" id="client9" mktoName="Client 9 Image">
-			<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/t-mobile.png" alt="T-Mobile">
-		</div><!-- //inline-block hack
-		--><div class="mktoImg" id="client10" mktoName="Client 10 Image">
-			<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/ubisoft.png" alt="Ubisoft">
-		</div><!-- //inline-block hack
-		--><div class="mktoImg" id="client11" mktoName="Client 11 Image">
-			<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/virgin-atlantic.png" alt="Virgin Atlantic">
-		</div><!-- //inline-block hack
-		--><div class="mktoImg" id="client12" mktoName="Client 12 Image">
-			<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/vodafone.png" alt="Vodafone">
-		</div>
-	</section>
-	<footer id="mktFooter" class="mktoText" mktoName="Footer">
-		<small>&copy;2015 Synthesio. All rights reserved.</small>
-	</footer>
+  <header class="lpHeader">
+    <img src="http://change-university.misd.info/wp-content/uploads/2015/11/logo.png" alt="Synthesio">
+  </header>
+  <section class="main group" role="main">
+    <h1 class="heading1"><?= the_title() ?></h1>
+    <h2 class="heading2"><?= $fields['lp_subtitle'] ?></h2>
+    <div class="lpContent">
+      <div class="lpImg" id="introImg"></div>
+      <div class="lpText" id="description">
+        <?= $fields['lp_description']; ?>
+      </div>
+    </div>
+    <aside class="form">
+      <h3><?= $fields['lp_form_title'] ?></h3>
+      <div class="lpForm" id="form">
+
+      </div>
+    </aside>
+  </section>
+  <section class="supporting" id="pitch">
+    <div class="mainPitch  lpText" id="mainPitch">
+      <h3><?= $fields['lp_benefits_title'] ?></h3>
+      <ul>
+        <?php foreach($fields['lp_benefits'] as $b) : ?>
+          <li><?= $b['benefit'] ?></li>
+        <?php endforeach; ?>
+      </ul>
+    </div>
+  </section>
+  <section class="about lpText" id="about">
+    <h3>About Change University</h3>
+    <p>Led by Ayelet Hines, Change University hosts suite of online trainings designed specifically for improving campaign skills of progressive nonprofits. She has helped people win campaigns on progressive issues for over 20 years, using her skills in organizing, fundraising, strategic communications, lobbying, and training. Her campaigns include work with the Environmental Defense Fund, Sierra Club, Amnesty International, Center on Alcohol Marketing and Youth, American Federation of State, County and Municipal Employees, Democratic National Committee, TexasObserver, National Democratic Institute, Texans Standing Tall, among others.</p>
+    <p>Ayelet's training experience includes teaching a course at the <a href="http://www.jhsph.edu/courses/course/17918/2013/410.672.81/introduction-to-campaigning-organizing-for-public-health/">Johns Hopkins Bloomberg School of Public Health</a>, titled <i>Introduction to Campaigning &amp; Organizing</i>.</p>
+    <p>Find out more about Ayelet and Change University by visiting the <a href="http://change-university.com/about">Change University website.</a></p>
+  </section>
+    <?php if(isset($fields['lp_testimonials']) && !empty($fields['lp_testimonials'])) : ?>
+  <section class="clients group">
+    <h3>Hear What Others Are Saying</h3>
+    <div class="lpImg" id="client1">
+      <img src="http://resources.synthesio.com/rs/297-CXJ-795/images/capital-one.png" alt="Vodafone">
+    </div><!-- //inline-block hack
+    --><div class="lpImg" id="client2">
+      <img src="http://resources.synthesio.com/rs/297-CXJ-795/images/mcdonalds.png" alt="Ford">
+    </div><!-- //inline-block hack
+    --><div class="lpImg" id="client3">
+      <img src="http://resources.synthesio.com/rs/297-CXJ-795/images/loreal.png" alt="L'Oréal Paris">
+    </div><!-- //inline-block hack
+    --><div class="lpImg" id="client4">
+      <img src="http://resources.synthesio.com/rs/297-CXJ-795/images/ford.png" alt="McDonalds">
+    </div><!-- //inline-block hack
+    --><div class="lpImg" id="client5">
+      <img src="http://resources.synthesio.com/rs/297-CXJ-795/images/microsoft.png" alt="Microsoft">
+    </div><!-- //inline-block hack
+    --><div class="lpImg" id="client6">
+      <img src="http://resources.synthesio.com/rs/297-CXJ-795/images/nissan.png" alt="Nissan">
+    </div><!-- //inline-block hack
+    --><div class="lpImg" id="client7">
+      <img src="http://resources.synthesio.com/rs/297-CXJ-795/images/peugeot.png" alt="Peugeot">
+    </div><!-- //inline-block hack
+    --><div class="lpImg" id="client8">
+      <img src="http://resources.synthesio.com/rs/297-CXJ-795/images/sony.png" alt="Sony">
+    </div><!-- //inline-block hack
+    --><div class="lpImg" id="client9">
+      <img src="http://resources.synthesio.com/rs/297-CXJ-795/images/t-mobile.png" alt="T-Mobile">
+    </div><!-- //inline-block hack
+    --><div class="lpImg" id="client10">
+      <img src="http://resources.synthesio.com/rs/297-CXJ-795/images/ubisoft.png" alt="Ubisoft">
+    </div><!-- //inline-block hack
+    --><div class="lpImg" id="client11">
+      <img src="http://resources.synthesio.com/rs/297-CXJ-795/images/virgin-atlantic.png" alt="Virgin Atlantic">
+    </div><!-- //inline-block hack
+    --><div class="lpImg" id="client12">
+      <img src="http://resources.synthesio.com/rs/297-CXJ-795/images/vodafone.png" alt="Vodafone">
+    </div>
+  </section>
+  <?php endif ?>
+  <footer id="lpFooter" class="lpText">
+    <small>&copy;<?= date('Y') ?> Change University. All rights reserved.</small>
+  </footer>
 </body>
 </html>
