@@ -1,36 +1,9 @@
+<?php 
+  $fields = get_fields(get_the_ID()); 
+?>
 <!DOCTYPE html>
 <html><!-- Events v1.0.1 -->
 <head>
-	<!-- Strings -->
-	<meta class="mktoString" id="title" mktoName="Title" default="Synthesio Events">
-	<meta class="mktoString" id="heading1" mktoName="Heading" default="I'm The Page Heading!">
-	<meta class="mktoString" id="heading2" mktoName="Subheading" default="I'm The Page Subeading!">
-	<meta class="mktoString" id="heading3" mktoName="Sidebar Title" default="Save The Date!">
-	<meta class="mktoString" id="heading4" mktoName="Featured Guests" default="Featured Guests">
-	<meta class="mktoString" id="heading5" mktoName="Body Title" default="Join Synthesio in NYC to pair your Social ROI with a fine wine">
-	<meta class="mktoString" id="heading6" mktoName="Form Heading" default="Reserve your spot today!">
-	<meta class="mktoString" id="speaker1Name" mktoName="Speaker 1 Name" default="Speaker Name">
-	<meta class="mktoString" id="speaker1Company" mktoName="Speaker 1 Company" default="Speaker Company">
-	<meta class="mktoString" id="speaker1Title" mktoName="Speaker 1 Title" default="Speaker Title">
-	<meta class="mktoString" id="speaker2Name" mktoName="Speaker 2 Name" default="Speaker Name">
-	<meta class="mktoString" id="speaker2Company" mktoName="Speaker 2 Company" default="Speaker Company">
-	<meta class="mktoString" id="speaker2Title" mktoName="Speaker 2 Title" default="Speaker Title">
-	<meta class="mktoString" id="speaker3Name" mktoName="Speaker 3 Name" default="Speaker Name">
-	<meta class="mktoString" id="speaker3Company" mktoName="Speaker 3 Company" default="Speaker Company">
-	<meta class="mktoString" id="speaker3Title" mktoName="Speaker 3 Title" default="Speaker Title">
-	<meta class="mktoString" id="month" mktoName="Month" default="December">
-	<meta class="mktoString" id="date" mktoName="Date" default="26">
-	<meta class="mktoString" id="aboutTitle" mktoName="About Synthesio" default="About Synthesio">
-	<meta class="mktoString" id="clients" mktoName="Our Clients" default="Our Clients">
-
-
-	<!-- Booleans -->
-	<meta class="mktoBoolean" id="speaker1Toggle" mktoName="Speaker 1" default="true" true_value="block" false_value="none">
-	<meta class="mktoBoolean" id="speaker2Toggle" mktoName="Speaker 2" default="true" true_value="block" false_value="none">
-	<meta class="mktoBoolean" id="speaker3Toggle" mktoName="Speaker 3" default="true" true_value="block" false_value="none">
-	<meta class="mktoBoolean" id="heading1Toggle" mktoName="Heading 1" default="true" true_value="block" false_value="none">
-	<meta class="mktoBoolean" id="heading2Toggle" mktoName="Heading 2" default="true" true_value="block" false_value="none">
-
 	<meta charset="utf-8">
 	<title>${title}</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -71,7 +44,7 @@
 			float: left;
 		}
 		header{
-			background-color: rgba(154, 202, 57, 1);
+			background-color: #3965af;
 			width: 30%;
 			color: #fff;
 			padding-left: 20px;

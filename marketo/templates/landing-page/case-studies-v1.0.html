@@ -1,47 +1,13 @@
+<?php $fields = get_fields(get_the_ID()); ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
-	<!-- Strings -->
-	<meta class="mktoString" id="title" mktoName="Title" default="Synthesio">
-	<meta class="mktoString" id="heading1" mktoName="Heading" default="I'm The Page Heading!">
-	<meta class="mktoString" id="heading2" mktoName="Subheading" default="I'm The Page Subeading!">
-	<meta class="mktoString" id="heading3" mktoName="Pitch Heading" default="I'm the Pitch!">
-	<meta class="mktoString" id="heading4" mktoName="Form Heading" default="Download Now">
-
-
-	<!-- Booleans -->
-	<meta class="mktoBoolean" id="heading1Toggle" mktoName="Heading" default="true" true_value="block" false_value="none">
-	<meta class="mktoBoolean" id="heading2Toggle" mktoName="Subeading" default="true" true_value="block" false_value="none">
-	<meta class="mktoBoolean" id="heading3Toggle" mktoName="Pitch Heading" default="true" true_value="block" false_value="none">
-	<meta class="mktoBoolean" id="heading4Toggle" mktoName="Form Heading" default="true" true_value="block" false_value="none">
-	<meta class="mktoBoolean" id="pitchToggle" mktoName="Pitch" default="true" true_value="block" false_value="none">
-	<meta class="mktoBoolean" id="supportingToggle" mktoName="Supporting" default="true" true_value="block" false_value="none">
-
-	<title>${title}</title>
+	<title><?= the_title()?> - Change University</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="http://resources.synthesio.com/rs/synthesio/images/reset.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="http://misd.info/reset.css" media="screen">
 	<link href='http://fonts.googleapis.com/css?family=Raleway:400,300' rel='stylesheet' type='text/css'>
 	<style>
-		/* --- Boolean Toggles --- */
-		.heading1{
-			display: ${heading1Toggle};
-		}
-		.heading2{
-			display: ${heading2Toggle};
-		}
-		.heading3{
-			display: ${heading3Toggle};
-		}
-		.heading4{
-			display: ${heading4Toggle};
-		}
-		#pitch{
-			display: ${pitchToggle};
-		}
-		#supporting{
-			display: ${supportingToggle};
-		}
 		body{
 			font-family: 'Raleway', 'Helvetica Neue', Helvetica, sans-serif;
 			letter-spacing: .1em;
@@ -64,12 +30,15 @@
 			text-transform: uppercase;
 		}
 		.form h3{
-			color: #212121;
+			color: #3965af;
 			text-align: center;
 			font-size: 30px;
 			line-height: 36px;
 			position: relative;
-			background: #fff url('http://resources.synthesio.com/rs/297-CXJ-795/images/horizontal-hr.png') repeat-x left 50%;
+			background: #fff url('http://misd.info/horizontal-hr.png') repeat-x left 50%;
+		}
+		.supporting h3{
+			color: #3965af;
 		}
 		.lCover{
 			background: #fff;
@@ -83,20 +52,21 @@
 		header, .main, footer, .about, .clients{
 			padding: 0 20%;
 		}
-		header{
-			height: 54px;
-		}
+		.lpHeader img{
+	      height: 70px;
+	    }
 		.main, .about{
 			color: #fff;
-			background: #212121;
+			background-color: #ff7209;
 			padding-top: 18px;
 		}
 		.main{
-			background-image: url('http://resources.synthesio.com/rs/297-CXJ-795/images/case-studies-bg.png');
+			background-image: url('http://misd.info/zig-zag-bg.png');
 		}
 		.graphic{
 			display: block;
 			margin: 0 auto;
+			max-width: 500px;
 		}
 		.about{
 			padding-bottom: 18px;
@@ -104,108 +74,62 @@
 		.form{
 			padding-top: 18px;
 			background: #fff;
-			border-bottom: 1px solid #212121;
+			border-bottom: 1px solid #ff7209;
 		}
 		label{
-			font-size: 16px;
-			width: 100% !important;
-			margin-bottom: 5px !important;
-		}
-		input, select{
-			width: 100% !important;
-			height: 30px;
-		}
-		select{
-			font-size: 30px !important;
-			margin-top: 5px !important;
-		}
-		label[for="Email_Opt_In__c"] {
-		  width: 100% !important;
-		  padding-left: 30px !important;
-		}
-		.mktoLogicalField.mktoCheckboxList.mktoHasWidth{
-			position: absolute;
-		}
-		.mktoForm{
-			margin: 0 auto;
-			width: 100% !important;
-		}
-		.mktoForm .mktoFormRow{
-			clear: none !important;
-			float: left;
-			width: 32%;
-			margin-right: 2%;
-		}
-		.mktoFormCol, .mktoFieldWrap{
+			font-size: 24px;
 			width: 100%;
+			margin-bottom: 9px;
 		}
-		.mktoForm .mktoFormRow:nth-of-type(3n){
-			margin-right: 0;
+		input[type="text"], input[type="email"]{
+			width: 100%;
+			height: 40px;
+			display: block;
+			margin-bottom: 18px;
+			transition: all .3s ease;
 		}
-		.mktoButtonRow{
-			display: block !important;
-		}
-		button[type="submit"]{
-			background-color: #212121;
+		input[type="submit"]{
+			background-color: #ff7209;
 			color: #fff;
-			border: 1px solid #fff;
+			border: 1px solid #ff7209;
 			transition: all .3s ease;
 			float: right;
 			height: 56px;
 			display: block;
-			font-size: 24px !important;
+			font-size: 24px;
 			position: relative;
+			margin-bottom: 18px;
 		}
-		button[type="submit"]:after{
-		    width: 0;
-		    height: 0;
-		    position: absolute;
-		    border-left: 28px solid #212121;
-		    border-top: 27px solid transparent;
-		    border-bottom: 27px solid transparent;
-		    content: '';
-		    right: -28px;
-		    top: 0;
-		    transition: all .3s ease;
-		}
-		button[type="submit"]:hover, button[type="submit"]:focus{
-			background-color: rgba(154, 202,  57, 1);
-		}
-		button[type="submit"]:hover:after, button[type="submit"]:focus:after{
-			border-left-color: rgba(154, 202, 57, 1);
+		input[type="submit"]:hover, input[type="submit"]:focus{
+			background-color: #3965af;
 		}
 		.supporting{
 			padding: 18px 20%;
 		}
 		.supporting ul{
-			list-style: circle;
-			padding-left: 20px;
+			list-style: none;
+			padding: 0;
+			margin: 0;
 		}
-		.subsection{
-			float: left;
-			width: 31%;
-			margin-right: 2%;
-		}
-		.subsection:last-child{
-			margin-right: 0;
-		}
-		.subsection:last-child{
-			margin-right: 0;
+		.supporting li{
+			width: <?= $wdth ?>;
 		}
 		.about, .clients{
 			margin-top: 36px;
 		}
 		.about{
-			background-image: url(http://resources.synthesio.com/rs/297-CXJ-795/images/synthesio-mark.png);
+			background-image: url('http://misd.info/gear-flower-75.png');
 			background-position: left 50%;
 			background-repeat: no-repeat;
 		}
-		.clients .mktoImg{
-			display: inline-block;
-			width: 25%;
-			margin-bottom: 10px;
-			text-align: center;
-		}
+		.about a:link, .about a:visited{
+			color: #fff;
+			text-decoration: none;
+			border-bottom: 1px solid #fff;
+	    }
+	    .about a:hover, .about a:active, .about a:focus{
+	      	border: none;
+	    }
 		footer{
 			background-color: #444;
 			color: #fff;
@@ -241,8 +165,8 @@
 			.subsection{
 				margin-bottom: 18px;
 			}
-			.mktoForm .mktoFormRow{
-				clear: both !important;
+			.lpForm .lpFormRow{
+				clear: both;
 				width: 100%;
 				margin-right: 0;
 			}
@@ -250,99 +174,79 @@
 	</style>
 </head>
 <body>
-	<header id="mktHeader">
-		<img src="http://resources.synthesio.com/rs/synthesio/images/Synthesio-Logo-RGB-150x50.jpg" alt="Synthesio">
+	<header class="lpHeader">
+		<a href="http://change-university.com">
+			<img src="http://change-university.misd.info/wp-content/uploads/2015/11/logo.png" alt="Change University">
+		</a>
 	</header>
 	<section class="main" role="main">
-		<h1 class="heading1">${heading1}</h1>
-		<h2 class="heading2">${heading2}</h2>
-		<div class="mktoImg" id="bannerImage" mktoName="Banenr Image">
-			<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/case-studies-graphic.png" alt="Synthesio Case Studies" class="graphic">
+		<h1 class="heading1"><?= the_title() ?></h1>
+		<h2 class="heading2"><?= $fields['lp_subtitle'] ?></h2>
+		<div class="lpImg" id="bannerImage">
+			<img src="http://change-university.misd.info/wp-content/uploads/2016/05/cu-lp-graphic.png" alt="Synthesio Case Studies" class="graphic">
 		</div>
 	</section>
 	<section class="supporting" id="pitch">
-		<h3 class="heading3">${heading3}</h3>
-		<div class="mainPitch  mktoText" id="mainPitch" mktoName="Pitch">
-			<p>Intro paragraphs and pitch go here. Use this space to captivate the user with how awesome Synthesio is and how their lives will be more meaningful once they read this case study.</p>
-			<p>Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-			<p>Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+		<h3 class="heading3"><?= $fields['lp_benefits_title'] ?></h3>
+		<div class="mainPitch  lpText" id="mainPitch">
+			<?= $fields['lp_description']; ?>
 		</div>
 		<aside class="form group">
-			<h3><span class="lCover">${heading4}</span></h3>
-			<div class="mktoForm" id="form" mktoName="Signup Form">
-				
-			</div>
+			<h3><span class="lCover"><?= $fields['lp_form_title'] ?></span></h3>
+			<!-- Begin MailChimp Signup Form -->
+	        <div id="mc_embed_signup">
+	        <form action="//change-university.us10.list-manage.com/subscribe/post?u=2cc1fc7a7eaea09ac86fa67d4&amp;id=d3673bb50a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+	          <input type="hidden" name="SRC" value="<?=$fields['lp_freetool']?>">
+	            <div id="mc_embed_signup_scroll">
+	        <div class="mc-field-group">
+	          <label for="mce-FNAME">First Name  <span class="asterisk">*</span>
+	        </label>
+	          <input type="text" value="" name="FNAME" class="required" id="mce-FNAME">
+	        </div>
+	        <div class="mc-field-group">
+	          <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+	        </label>
+	          <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+	        </div>
+	          <div id="mce-responses" class="clear">
+	            <div class="response" id="mce-error-response" style="display:none"></div>
+	            <div class="response" id="mce-success-response" style="display:none"></div>
+	          </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+	            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_2cc1fc7a7eaea09ac86fa67d4_d3673bb50a" tabindex="-1" value=""></div>
+	            <div class="clear"><input type="submit" value="<?= $fields['lp_cta']?>" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+	            </div>
+	        </form>
+	        </div>
+
+	        <!--End mc_embed_signup-->
 		</aside>
 	</section>
-	<section class="supporting group" id="supporting">
-		<div class="subsection  mktoText" id="sub1" mktoName="Supporting 1">
-			<ul>
-				<li>Case Study specifics go here.</li>
-				<li>This is free-form content.</li>
-				<li>It can be changed to whatever you want.</li>
-				<li>As long as it stays within the page branding.</li>
-				<li>Supporting bullets go here.</li>
-			</ul>
-		</div>
-		<div class="subsection  mktoText" id="sub2" mktoName="Supporting 2">
-			<p>Case Study specifics go here.</p>
-			<p>This is free-form content. It can be changed to whatever you want. As long as it stays within the page branding. As long as it stays within the page branding.</p>
-		</div>
-		<div class="subsection  mktoText" id="sub3" mktoName="Supporting 3">
-			<ul>
-				<li>Case Study specifics go here.</li>
-				<li>This is free-form content.</li>
-				<li>It can be changed to whatever you want.</li>
-				<li>As long as it stays within the page branding.</li>
-				<li>Supporting bullets go here.</li>
-			</ul>
-		</div>
+	<section class="supporting group">
+		<ul>
+			<?php foreach($fields['lp_benefits'] as $b) : ?>
+				<li><?= $b['benefit'] ?></li>
+			<?php endforeach; ?>
+		</ul>
 	</section>
-	<section class="about mktoText" id="about" mktoName="About Synthesio">
-		<h3>About Synthesio</h3>
-		<p>Synthesio, named the leader in a 2014 report looking at global Social Intelligence platforms. Used by some of the world's top brands, and the agencies that support them, Synthesio is the framework for building social intelligence that provides real business results. Whether an organization's social team is built within Marketing or crosses multiple departments, business units or geographies, Synthesio helps teams listen to, and analyze, consumer conversations across social and mainstream media within one platform. Founded in 2006, Synthesio has offices in New York, Paris, London, and Singapore.</p>
+	<section class="about">
+		<h3>About Change University</h3>
+    	<p>Led by Ayelet Hines, Change University hosts suite of online trainings designed specifically for improving campaign skills of progressive nonprofits. She has helped people win campaigns on progressive issues for over 20 years, using her skills in organizing, fundraising, strategic communications, lobbying, and training. Her campaigns include work with the Environmental Defense Fund, Sierra Club, Amnesty International, Center on Alcohol Marketing and Youth, American Federation of State, County and Municipal Employees, Democratic National Committee, TexasObserver, National Democratic Institute, Texans Standing Tall, among others.</p>
+    	<p>Ayelet's training experience includes teaching a course at the <a href="http://www.jhsph.edu/courses/course/17918/2013/410.672.81/introduction-to-campaigning-organizing-for-public-health/">Johns Hopkins Bloomberg School of Public Health</a>, titled <i>Introduction to Campaigning &amp; Organizing</i>.</p>
+    	<p>Find out more about Ayelet and Change University by visiting the <a href="http://change-university.com/about">Change University website.</a></p>
 	</section>
-	<section class="clients group">
-		<h3>Our Clients</h3>
-		<div class="mktoImg" id="client1" mktoName="Client 1 Image">
-			<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/capital-one.png" alt="Capital One">
-		</div><!-- //inline-block hack
-		--><div class="mktoImg" id="client2" mktoName="Client 2 Image">
-			<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/peugeot.png" alt="Peugeot">
-		</div><!-- //inline-block hack
-		--><div class="mktoImg" id="client3" mktoName="Client 3 Image">
-			<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/ford.png" alt="Ford">
-		</div><!-- //inline-block hack
-		--><div class="mktoImg" id="client4" mktoName="Client 4 Image">
-			<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/nissan.png" alt="Nissan">
-		</div><!-- //inline-block hack
-		--><div class="mktoImg" id="client8" mktoName="Client 8 Image">
-			<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/virgin-atlantic.png" alt="Virgin Atlantic">
-		</div><!-- //inline-block hack
-		--><div class="mktoImg" id="client5" mktoName="Client 5 Image">
-			<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/master-card.png" alt="MasterCard">
-		</div><!-- //inline-block hack
-		--><div class="mktoImg" id="client6" mktoName="Client 6 Image">
-			<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/american-express.png" alt="American Express">
-		</div><!-- //inline-block hack
-		--><div class="mktoImg" id="client7" mktoName="Client 7 Image">
-			<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/lg.png" alt="LG">
-		</div><!-- //inline-block hack
-		--><div class="mktoImg" id="client9" mktoName="Client 9 Image">
-			<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/google.png" alt="Google">
-		</div><!-- //inline-block hack
-		--><div class="mktoImg" id="client11" mktoName="Client 11 Image">
-			<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/loreal.png" alt="L'Oreal">
-		</div><!-- //inline-block hack
-		--><div class="mktoImg" id="client10" mktoName="Client 10 Image">
-			<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/ing.png" alt="ING">
-		</div><!-- //inline-block hack
-		--><div class="mktoImg" id="client12" mktoName="Client 12 Image">
-			<img src="http://resources.synthesio.com/rs/297-CXJ-795/images/toyota.png" alt="Toyota">
-		</div>
+	<?php if(isset($fields['lp_testimonials']) && !empty($fields['lp_testimonials'])) : ?>
+	<section class="clients">
+	<h3>Hear What Others Are Saying</h3>
+	<?php foreach ($fields['lp_testimonials'] as $t) : ?>
+	  <div class="testimonial">
+	    <img src="<?=$t['image']?>" alt="Change University Testimonial">
+	    <p><?=$t['testimonial']?></p>
+	  </div>
+	<?php endforeach; ?>
 	</section>
-	<footer id="mktFooter" class="mktoText" mktoName="Footer">
-		<small>&copy;2015 Synthesio. All rights reserved.</small>
+	<?php endif ?>
+  	<footer id="mktFooter" class="lpText">
+		<small>&copy;<?= date('Y') ?> Change University. All rights reserved.</small>
 	</footer>
 </body>
 </html>
